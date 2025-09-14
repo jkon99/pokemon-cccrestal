@@ -1,4 +1,4 @@
-# Pokémon Crystal [![Build Status][ci-badge]][ci]
+# Pokémon CCCrEstal
 
 This is a disassembly of Pokémon Crystal.
 
