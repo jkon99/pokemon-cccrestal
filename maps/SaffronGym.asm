@@ -11,9 +11,11 @@ SaffronGym_MapScripts:
 
 	def_callbacks
 
-SaffronGymSabrinaScript:
+SaffronGymSabrinaScript: ; added getting dream eater tm
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchSabrina
 	checkflag ENGINE_MARSHBADGE
 	iftrue .FightDone
 	writetext SabrinaIntroText
@@ -34,15 +36,65 @@ SaffronGymSabrinaScript:
 	waitsfx
 	setflag ENGINE_MARSHBADGE
 	writetext SabrinaMarshBadgeText
-	waitbutton
-	closetext
-	end
+	sjump .AfterBattle
 
 .FightDone:
 	writetext SabrinaFightDoneText
 	waitbutton
 	closetext
 	end
+
+.AfterBattle:
+	writetext SabrinaDreamEaterText
+	promptbutton
+	verbosegiveitem TM_DREAM_EATER ; check if right
+	setevent EVENT_GOT_TM_DREAM_EATER
+	waitbutton
+	closetext
+	end
+
+.RematchSabrina:
+	writetext SabrinaText_Rematch
+	yesorno
+	iffalse .SabrinaRefuse
+	writetext SabrinaIntroText
+	waitbutton
+	closetext
+	winlosstext SabrinaWinLossText, 0
+	loadtrainer SABRINA, SABRINA2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext SabrinaText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.SabrinaRefuse:
+	writetext SabrinaText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+SabrinaText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+SabrinaText_RematchEnd:
+	text "Oh well..."
+	done
+
+SabrinaDreamEaterText:
+	text "You can have"
+	line "this TM, it"
+	cont "is Dream Eater!"
+
+	para "Youll be even more"
+	line "vulnerable in"
+	cont "your sleep!"
+	done
+
 
 TrainerMediumRebecca:
 	trainer MEDIUM, REBECCA, EVENT_BEAT_MEDIUM_REBECCA, MediumRebeccaSeenText, MediumRebeccaBeatenText, 0, .Script

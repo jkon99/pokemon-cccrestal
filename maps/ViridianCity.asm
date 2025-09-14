@@ -54,7 +54,7 @@ ViridianCityDreamEaterFisher:
 	iftrue .GotDreamEater
 	writetext ViridianCityDreamEaterFisherText
 	promptbutton
-	verbosegiveitem TM_DREAM_EATER
+	verbosegiveitem RARE_CANDY ; was dreameater but gives rare candy instead
 	iffalse .NoRoomForDreamEater
 	setevent EVENT_GOT_TM42_DREAM_EATER
 .GotDreamEater:
@@ -158,20 +158,10 @@ ViridianCityDreamEaterFisherText:
 
 	para "Huh?"
 	line "What's this?"
-
-	para "Where did this TM"
-	line "come from?"
-
-	para "This is spooky!"
-	line "Here, you can have"
-	cont "this TM."
 	done
 
 ViridianCityDreamEaterFisherGotDreamEaterText:
-	text "TM42 contains"
-	line "DREAM EATER…"
-
-	para "…Zzzzz…"
+	text "…Zzzzz…"
 	done
 
 ViridianCityYoungsterText:

@@ -5,11 +5,11 @@ Route27SandstormHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-
+; GIVES STEEL_WING INSTEAD
 SandstormHouseWoman:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM37_SANDSTORM
+	checkevent EVENT_GOT_TM37_SANDSTORM ; steel wing, swap with house in route 28, that house will give something else
 	iftrue .AlreadyGotItem
 	special GetFirstPokemonHappiness
 	writetext SandstormHouseWomanText1

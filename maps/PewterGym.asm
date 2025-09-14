@@ -11,6 +11,8 @@ PewterGym_MapScripts:
 PewterGymBrockScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchBrock
 	checkflag ENGINE_BOULDERBADGE
 	iftrue .FightDone
 	writetext BrockIntroText
@@ -28,15 +30,64 @@ PewterGymBrockScript:
 	waitsfx
 	setflag ENGINE_BOULDERBADGE
 	writetext BrockBoulderBadgeText
-	waitbutton
-	closetext
-	end
+	sjump .AfterBattle
 
 .FightDone:
 	writetext BrockFightDoneText
 	waitbutton
 	closetext
 	end
+
+.AfterBattle:
+	writetext BrockSandstormText
+	promptbutton
+	verbosegiveitem TM_SANDSTORM
+	setevent EVENT_GOT_TM_SANDSTORM
+	waitbutton
+	closetext
+	end
+
+.RematchBrock:
+	writetext BrockText_Rematch
+	yesorno
+	iffalse .BrockRefuse
+	writetext BrockIntroText
+	waitbutton
+	closetext
+	winlosstext BrockWinLossText, 0
+	loadtrainer BROCK, BROCK2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext BrockText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.BrockRefuse:
+	writetext BrockText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+BrockText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+BrockText_RematchEnd:
+	text "Oh well..."
+	done
+
+BrockSandstormText:
+	text "By the way you"
+	line "deserve this as"
+	cont "well!"
+
+	para "Its SANDSTORM,"
+	line "used to enhance"
+	cont "your rock mons!"
+	done
 
 TrainerCamperJerry:
 	trainer CAMPER, JERRY, EVENT_BEAT_CAMPER_JERRY, CamperJerrySeenText, CamperJerryBeatenText, 0, .Script
@@ -143,6 +194,21 @@ BrockFightDoneText:
 	cont "come a lot strong-"
 	cont "er too."
 	done
+
+/*BrockTMGivenText:
+	text "TM37 happens to be"
+	line "SANDSTORM."
+
+	para "It's a move that"
+	line "inflicts damage on"
+	cont "both battlers."
+
+	para "It's for advanced"
+	line "trainers only."
+
+	para "Use it if you"
+	line "dare. Good luck!"
+	done */
 
 CamperJerrySeenText:
 	text "The trainers of"

@@ -15,6 +15,8 @@ AzaleaGym_MapScripts:
 AzaleaGymBugsyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchBugsy
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .FightDone
 	writetext BugsyText_INeverLose
@@ -45,6 +47,28 @@ AzaleaGymBugsyScript:
 	iffalse .NoRoomForFuryCutter
 	setevent EVENT_GOT_TM49_FURY_CUTTER
 	writetext BugsyText_FuryCutterSpeech
+	waitbutton
+	closetext
+	end
+.RematchBugsy:
+	writetext BugsyText_Rematch
+	yesorno
+	iffalse .BugsyRefuse
+	writetext BugsyText_INeverLose
+	waitbutton
+	closetext
+	winlosstext BugsyText_ResearchIncompleteR, 0
+	loadtrainer BUGSY, BUGSY2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext BugsyText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.BugsyRefuse:
+	writetext BugsyText_RematchEnd
 	waitbutton
 	closetext
 	end
@@ -176,6 +200,23 @@ BugsyText_ResearchIncomplete:
 	para "OK, you win. Take"
 	line "this BADGE."
 	done
+
+BugsyText_ResearchIncompleteR:
+	text "Whoa, amazing!"
+	line "You're an expert"
+	cont "on #MON!"
+	done
+
+
+BugsyText_Rematch: 
+	text "Care for a" ;add prompt yes/no
+	line "rematch?"
+	done
+
+BugsyText_RematchEnd:
+	text "Oh well..."
+	done
+
 
 Text_ReceivedHiveBadge:
 	text "<PLAYER> received"

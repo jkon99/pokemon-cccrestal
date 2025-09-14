@@ -1,9 +1,9 @@
 DEF GOLDENRODGAMECORNER_TM25_COINS      EQU 5500
 DEF GOLDENRODGAMECORNER_TM14_COINS      EQU 5500
 DEF GOLDENRODGAMECORNER_TM38_COINS      EQU 5500
-DEF GOLDENRODGAMECORNER_ABRA_COINS      EQU 100
-DEF GOLDENRODGAMECORNER_CUBONE_COINS    EQU 800
-DEF GOLDENRODGAMECORNER_WOBBUFFET_COINS EQU 1500
+DEF GOLDENRODGAMECORNER_ABRA_COINS      EQU 500 ; switched to 500 these three
+DEF GOLDENRODGAMECORNER_CUBONE_COINS    EQU 500
+DEF GOLDENRODGAMECORNER_WOBBUFFET_COINS EQU 500
 
 	object_const_def
 	const GOLDENRODGAMECORNER_CLERK
@@ -26,12 +26,17 @@ GoldenrodGameCorner_MapScripts:
 	callback MAPCALLBACK_OBJECTS, GoldenrodGameCornerMoveTutorCallback
 
 GoldenrodGameCornerMoveTutorCallback:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_TEAM_ROCKET_DISBANDED ; change so does it after beating team rocket in goldenrod instead of EVENT_BEAT_ELITE_FOUR
 	iffalse .finish
 	checkitem COIN_CASE
 	iffalse .move_tutor_inside
-	readvar VAR_WEEKDAY
+	readvar VAR_WEEKDAY ; change so move tutor there everyday
+	ifequal SUNDAY, .move_tutor_outside
+	ifequal MONDAY, .move_tutor_outside
+	ifequal TUESDAY, .move_tutor_outside
 	ifequal WEDNESDAY, .move_tutor_outside
+	ifequal THURSDAY, .move_tutor_outside
+	ifequal FRIDAY, .move_tutor_outside
 	ifequal SATURDAY, .move_tutor_outside
 .move_tutor_inside
 	appear GOLDENRODGAMECORNER_MOVETUTOR
@@ -175,43 +180,43 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	ifequal 3, .Wobbuffet
 	sjump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
-.Abra:
+.Abra:  ; should be jynx, lv18, 500 coins
 	checkcoins GOLDENRODGAMECORNER_ABRA_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	getmonname STRING_BUFFER_3, ABRA
+	getmonname STRING_BUFFER_3, JYNX
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval ABRA
+	setval JYNX
 	special GameCornerPrizeMonCheckDex
-	givepoke ABRA, 5
+	givepoke JYNX, 18
 	takecoins GOLDENRODGAMECORNER_ABRA_COINS
 	sjump .loop
 
-.Cubone:
+.Cubone:  ; should be porygon, lv18, 500 coins
 	checkcoins GOLDENRODGAMECORNER_CUBONE_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	getmonname STRING_BUFFER_3, CUBONE
+	getmonname STRING_BUFFER_3, PORYGON
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	setval CUBONE
+	setval PORYGON
 	special GameCornerPrizeMonCheckDex
-	givepoke CUBONE, 15
+	givepoke PORYGON, 18
 	takecoins GOLDENRODGAMECORNER_CUBONE_COINS
 	sjump .loop
 
-.Wobbuffet:
+.Wobbuffet: ; should be lv 18, 500 coins
 	checkcoins GOLDENRODGAMECORNER_WOBBUFFET_COINS
 	ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	readvar VAR_PARTYCOUNT
@@ -225,7 +230,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	waitbutton
 	setval WOBBUFFET
 	special GameCornerPrizeMonCheckDex
-	givepoke WOBBUFFET, 15
+	givepoke WOBBUFFET, 18
 	takecoins GOLDENRODGAMECORNER_WOBBUFFET_COINS
 	sjump .loop
 
@@ -238,9 +243,9 @@ GoldenrodGameCornerPrizeMonVendorScript:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
-	db "ABRA        100@"
-	db "CUBONE      800@"
-	db "WOBBUFFET  1500@"
+	db "JYNX        500@" ; changed
+	db "PORYGON      500@" ; changed
+	db "WOBBUFFET  500@" ; changed
 	db "CANCEL@"
 
 GoldenrodGameCornerPharmacistScript:

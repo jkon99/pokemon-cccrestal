@@ -49,7 +49,15 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KogaScript_KogaBeatenText, 0
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .LoadRematch
 	loadtrainer KOGA, KOGA1
+	jump .StartBattle
+	
+.LoadRematch:
+	loadtrainer KOGA, KOGA2 ; rematch after mt silver opened
+
+.StartBattle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA

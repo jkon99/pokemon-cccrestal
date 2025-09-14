@@ -67,5 +67,18 @@ TrainerClassNames::
 	li "LEADER"
 	li "OFFICER"
 	li "ROCKET"
-	li "MYSTICALMAN"
+	li "MYSTICALMAN" ; custom below
+  	li "DEVELOPER"	
+	li "CHALLENGER" ;CHALLENGER=FRONTRUNNER
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+	li "CHALLENGER"
+
 	assert_list_length NUM_TRAINER_CLASSES

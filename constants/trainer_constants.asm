@@ -30,27 +30,35 @@ DEF NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 DEF KRIS EQU __trainer_class__
 	trainerclass FALKNER ; 1
 	const FALKNER1
+	const FALKNER2
 
 	trainerclass WHITNEY ; 2
 	const WHITNEY1
+	const WHITNEY2
 
 	trainerclass BUGSY ; 3
 	const BUGSY1
+	const BUGSY2
 
 	trainerclass MORTY ; 4
 	const MORTY1
+	const MORTY2
 
 	trainerclass PRYCE ; 5
 	const PRYCE1
+	const PRYCE2
 
 	trainerclass JASMINE ; 6
 	const JASMINE1
+	const JASMINE2
 
 	trainerclass CHUCK ; 7
 	const CHUCK1
+	const CHUCK2
 
 	trainerclass CLAIR ; 8
 	const CLAIR1
+	const CLAIR2
 
 	trainerclass RIVAL1 ; 9
 	const RIVAL1_1_CHIKORITA
@@ -73,6 +81,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass WILL ; b
 	const WILL1
+	const WILL2
 
 	trainerclass CAL ; c
 	const CAL1 ; unused
@@ -81,24 +90,31 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass BRUNO ; d
 	const BRUNO1
+	const BRUNO2
 
 	trainerclass KAREN ; e
 	const KAREN1
+	const KAREN2
 
 	trainerclass KOGA ; f
 	const KOGA1
+	const KOGA2
 
 	trainerclass CHAMPION ; 10
 	const LANCE
+	const LANCE2
 
 	trainerclass BROCK ; 11
 	const BROCK1
+	const BROCK2
 
 	trainerclass MISTY ; 12
 	const MISTY1
+	const MISTY2
 
 	trainerclass LT_SURGE ; 13
 	const LT_SURGE1
+	const LT_SURGE2
 
 	trainerclass SCIENTIST ; 14
 	const ROSS
@@ -109,6 +125,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass ERIKA ; 15
 	const ERIKA1
+	const ERIKA2
 
 	trainerclass YOUNGSTER ; 16
 	const JOEY1
@@ -191,9 +208,11 @@ DEF KRIS EQU __trainer_class__
 	const DANA3
 	const DANA4
 	const DANA5
+	const STELLA
 
 	trainerclass JANINE ; 1a
 	const JANINE1
+	const JANINE2
 
 	trainerclass COOLTRAINERM ; 1b
 	const NICK
@@ -327,6 +346,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass SABRINA ; 23
 	const SABRINA1
+	const SABRINA2
 
 	trainerclass BUG_CATCHER ; 24
 	const DON
@@ -434,6 +454,7 @@ DEF KRIS EQU __trainer_class__
 	const HUEY2
 	const HUEY3
 	const HUEY4
+	const SAILOR_ARNOLD
 
 	trainerclass SUPER_NERD ; 29
 	const STAN
@@ -500,6 +521,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass BLAINE ; 2e
 	const BLAINE1
+	const BLAINE2
 
 	trainerclass BURGLAR ; 2f
 	const DUNCAN
@@ -688,6 +710,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass BLUE ; 40
 	const BLUE1
+	const BLUE2
 
 	trainerclass OFFICER ; 41
 	const KEITH
@@ -702,5 +725,41 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+; custom here and below, party pointers and parties done
 
+	trainerclass JON ; 44
+	const JON1
+
+	trainerclass ALEX_ ; 45
+	const ALEX1
+
+	trainerclass ASH ; 46
+	const ASH1
+
+	trainerclass CONNOR ; 47
+	const CONNOR1
+
+	trainerclass FRANCIS ; 48
+	const FRANCIS1 
+
+	trainerclass GENNA ; 49
+	const GENNA1
+
+	trainerclass LEX ; 50
+	const LEX1
+
+	trainerclass NAHOM ; 51
+	const NAHOM1 
+
+	trainerclass NANDO ; 52
+	const NANDO1 
+
+	trainerclass QASIM ; 53
+	const QASIM1
+
+	trainerclass QUINN_ ; 54
+	const QUINN1 
+
+	trainerclass TJ ; 55
+	const TJ1 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

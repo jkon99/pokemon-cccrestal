@@ -2,6 +2,7 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_RIVAL
+	;const NEWBARKTOWN_TESTTRAINER ;test
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
@@ -278,6 +279,33 @@ NewBarkTownElmsLabSignText:
 NewBarkTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
+/*
+TrainerFrontrunnerTJ1:
+	trainer GENNA, GENNA1, EVENT_BEAT_FRONTRUNNER_GENNA, FrontrunnerTJSeenText1, FrontrunnerTJBeatenText1, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext FrontrunnerTJAfterBattleText1
+	waitbutton
+	closetext
+	end
+
+FrontrunnerTJSeenText1: 
+	text "Loser has to commit"
+	line "tax fraud!"
+	done
+
+FrontrunnerTJBeatenText1:
+	text "Okay so about that "
+	line "bet.."
+	done
+
+FrontrunnerTJAfterBattleText1:
+	text "The IRS probably won’t"
+	line "notice me anyway, "
+	cont "right?"
+	done */
 
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
@@ -302,3 +330,4 @@ NewBarkTown_MapEvents:
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
+	;object_event 2, 8, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerFrontrunnerTJ1, -1 ;test

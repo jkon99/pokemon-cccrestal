@@ -2,6 +2,7 @@
 
 TrainerPicPointers::
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
+; switch between dba and dba_pic
 	table_width 3
 	dba_pic FalknerPic
 	dba_pic WhitneyPic
@@ -24,7 +25,7 @@ TrainerPicPointers::
 	dba_pic LtSurgePic
 	dba_pic ScientistPic
 	dba_pic ErikaPic
-	dba_pic YoungsterPic
+	dba_pic YoungsterPic 
 	dba_pic SchoolboyPic
 	dba_pic BirdKeeperPic
 	dba_pic LassPic
@@ -70,4 +71,16 @@ TrainerPicPointers::
 	dba_pic OfficerPic
 	dba_pic GruntfPic
 	dba_pic MysticalmanPic
+	dba_pic JonPic ;custom below
+	dba_pic AlexPic
+	dba_pic AshPic
+	dba_pic ConnorPic
+	dba_pic FrancisPic
+	dba_pic GennaPic
+	dba_pic LexPic
+	dba_pic NahomPic
+	dba_pic NandoPic
+	dba_pic QasimPic
+	dba_pic QuinnPic
+	dba_pic TJPic  ; assert_table_length NUM_TRAINER_CLASSES but did -12 for now cause of pics.asm error
 	assert_table_length NUM_TRAINER_CLASSES

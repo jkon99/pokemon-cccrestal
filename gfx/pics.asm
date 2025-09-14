@@ -56,11 +56,6 @@ QuilavaFrontpic:     INCBIN "gfx/pokemon/quilava/front.animated.2bpp.lz"
 
 SECTION "Pics 3", ROMX
 
-SteelixFrontpic:     INCBIN "gfx/pokemon/steelix/front.animated.2bpp.lz"
-AlakazamFrontpic:    INCBIN "gfx/pokemon/alakazam/front.animated.2bpp.lz"
-GyaradosFrontpic:    INCBIN "gfx/pokemon/gyarados/front.animated.2bpp.lz"
-KangaskhanFrontpic:  INCBIN "gfx/pokemon/kangaskhan/front.animated.2bpp.lz"
-RhydonFrontpic:      INCBIN "gfx/pokemon/rhydon/front.animated.2bpp.lz"
 GolduckFrontpic:     INCBIN "gfx/pokemon/golduck/front.animated.2bpp.lz"
 RhyhornFrontpic:     INCBIN "gfx/pokemon/rhyhorn/front.animated.2bpp.lz"
 PidgeotFrontpic:     INCBIN "gfx/pokemon/pidgeot/front.animated.2bpp.lz"
@@ -100,6 +95,7 @@ PinsirFrontpic:      INCBIN "gfx/pokemon/pinsir/front.animated.2bpp.lz"
 UnownEFrontpic:      INCBIN "gfx/pokemon/unown_e/front.animated.2bpp.lz"
 
 
+
 SECTION "Pics 5", ROMX
 
 GolbatFrontpic:      INCBIN "gfx/pokemon/golbat/front.animated.2bpp.lz"
@@ -123,6 +119,7 @@ AzumarillFrontpic:   INCBIN "gfx/pokemon/azumarill/front.animated.2bpp.lz"
 ParasectFrontpic:    INCBIN "gfx/pokemon/parasect/front.animated.2bpp.lz"
 MrMimeFrontpic:      INCBIN "gfx/pokemon/mr__mime/front.animated.2bpp.lz"
 HeracrossFrontpic:   INCBIN "gfx/pokemon/heracross/front.animated.2bpp.lz"
+
 
 
 SECTION "Pics 6", ROMX
@@ -708,12 +705,82 @@ UnownPBackpic:       INCBIN "gfx/pokemon/unown_p/back.2bpp.lz"
 UnownIBackpic:       INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
 UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
+/*SECTION "Jon Trainer Pic", ROMX ;custom
+JonPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/jon.2bpp.lz"
 
+SECTION "Alex Trainer Pic", ROMX
+
+AlexPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/alex.2bpp.lz"
+
+SECTION "Ash Trainer Pic", ROMX
+
+AshPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/ash.2bpp.lz"
+
+SECTION "Connor Trainer Pic", ROMX
+
+ConnorPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/connor.2bpp.lz"
+
+SECTION "Francis Trainer Pic", ROMX
+
+FrancisPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/francis.2bpp.lz"
+
+SECTION "Genna Trainer Pic", ROMX
+
+GennaPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/genna.2bpp.lz"
+
+SECTION "Lex Trainer Pic", ROMX
+
+LexPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/lex.2bpp.lz"
+
+SECTION "Nahom Trainer Pic", ROMX
+
+NahomPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/nahom.2bpp.lz"
+
+SECTION "Nando Trainer Pic", ROMX
+
+NandoPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/nando.2bpp.lz"
+
+SECTION "Qasim Trainer Pic", ROMX
+
+QasimPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/qasim.2bpp.lz"
+
+SECTION "Quinn Trainer Pic", ROMX
+
+QuinnPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/quinn.2bpp.lz"
+
+SECTION "TJ Trainer Pic", ROMX
+
+TJPic:: ; double colon creates label for `dba`
+    INCBIN "gfx/trainers/tj.2bpp.lz" */
 SECTION "Pics 19", ROMX
 
-; Seems to be an accidental copy of the previous bank
+JonPic:              INCBIN "gfx/trainers/jon.2bpp.lz" ;custom
+AlexPic:             INCBIN "gfx/trainers/alex.2bpp.lz" ;custom
+AshPic:              INCBIN "gfx/trainers/ash.2bpp.lz" ;custom
+ConnorPic:           INCBIN "gfx/trainers/connor.2bpp.lz" ; custom
+FrancisPic:          INCBIN "gfx/trainers/francis.2bpp.lz" ;custom
+GennaPic:            INCBIN "gfx/trainers/genna.2bpp.lz" ;custom
+LexPic:              INCBIN "gfx/trainers/lex.2bpp.lz" ; custom
+NahomPic:            INCBIN "gfx/trainers/nahom.2bpp.lz" ;custom
+NandoPic:            INCBIN "gfx/trainers/nando.2bpp.lz" ;custom
+QasimPic:            INCBIN "gfx/trainers/qasim.2bpp.lz" ; custom
+QuinnPic:            INCBIN "gfx/trainers/quinn.2bpp.lz" ;custom
+TJPic:               INCBIN "gfx/trainers/tj.2bpp.lz" ;custom  
 
-INCBIN "gfx/pokemon/spinarak/back.2bpp.lz"
+; Seems to be an accidental copy of the previous bank, revert this block if there is issues
+
+/*INCBIN "gfx/pokemon/spinarak/back.2bpp.lz"
 INCBIN "gfx/pokemon/raikou/back.2bpp.lz"
 INCBIN "gfx/pokemon/unown_k/front.animated.2bpp.lz"
 INCBIN "gfx/pokemon/houndour/back.2bpp.lz"
@@ -772,18 +839,27 @@ INCBIN "gfx/pokemon/unown_q/back.2bpp.lz"
 INCBIN "gfx/pokemon/unown_y/back.2bpp.lz"
 INCBIN "gfx/pokemon/unown_p/back.2bpp.lz"
 INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
-INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
+INCBIN "gfx/pokemon/unown_r/back.2bpp.lz" */
 
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).
 
-SECTION "Pics 20", ROMX
+SECTION "Pics 20", ROMX 
+
+SteelixFrontpic:     INCBIN "gfx/pokemon/steelix/front.animated.2bpp.lz"
+AlakazamFrontpic:    INCBIN "gfx/pokemon/alakazam/front.animated.2bpp.lz"
+GyaradosFrontpic:    INCBIN "gfx/pokemon/gyarados/front.animated.2bpp.lz"
+KangaskhanFrontpic:  INCBIN "gfx/pokemon/kangaskhan/front.animated.2bpp.lz"
+RhydonFrontpic:      INCBIN "gfx/pokemon/rhydon/front.animated.2bpp.lz"
 
 SECTION "Pics 21", ROMX
 
+
 SECTION "Pics 22", ROMX
 
+
 SECTION "Pics 23", ROMX
+
 
 SECTION "Pics 24", ROMX

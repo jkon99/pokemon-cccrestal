@@ -70,4 +70,16 @@ TrainerGroups:
 	dw OfficerGroup
 	dw GruntFGroup
 	dw MysticalmanGroup
+	dw JonGroup ; custom here and below
+	dw AlexGroup
+	dw AshGroup
+	dw ConnorGroup
+	dw FrancisGroup
+	dw GennaGroup 
+	dw LexGroup
+	dw NahomGroup
+	dw NandoGroup
+	dw QasimGroup
+	dw QuinnGroup 
+	dw TJGroup
 	assert_table_length NUM_TRAINER_CLASSES

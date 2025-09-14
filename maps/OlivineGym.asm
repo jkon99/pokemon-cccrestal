@@ -1,6 +1,8 @@
 	object_const_def
 	const OLIVINEGYM_JASMINE
 	const OLIVINEGYM_GYM_GUIDE
+	const OLIVINEGYM_SAILOR1
+	const OLIVINEGYM_LASS1
 
 OlivineGym_MapScripts:
 	def_scene_scripts
@@ -10,6 +12,8 @@ OlivineGym_MapScripts:
 OlivineGymJasmineScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchJasmine
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .FightDone
 	writetext Jasmine_SteelTypeIntro
@@ -30,6 +34,8 @@ OlivineGymJasmineScript:
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
+	setevent EVENT_BEAT_SAILOR_ARNOLD
+	setevent EVENT_BEAT_LASS_STELLA
 	writetext Jasmine_BadgeSpeech
 	promptbutton
 	verbosegiveitem TM_IRON_TAIL
@@ -40,12 +46,45 @@ OlivineGymJasmineScript:
 	closetext
 	end
 
+.RematchJasmine:
+	writetext JasmineText_Rematch
+	yesorno
+	iffalse .JasmineRefuse
+	writetext Jasmine_SteelTypeIntro
+	waitbutton
+	closetext
+	winlosstext Jasmine_BetterTrainer, 0
+	loadtrainer JASMINE, JASMINE2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext JasmineText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.JasmineRefuse:
+	writetext JasmineText_RematchEnd
+	waitbutton
+	closetext
+	end
+
 .GotIronTail:
 	writetext Jasmine_GoodLuck
 	waitbutton
 .NoRoomForIronTail:
 	closetext
 	end
+
+JasmineText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+
+JasmineText_RematchEnd:
+	text "Oh well..."
+	done
 
 OlivineGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -162,6 +201,60 @@ Jasmine_GoodLuck:
 	cont "but good luck…"
 	done
 
+TrainerSailorArnold:
+	trainer SAILOR, SAILOR_ARNOLD, EVENT_BEAT_SAILOR_ARNOLD, SailorArnoldSeenText, SailorArnoldBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext SailorArnoldAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerLassStella:
+	trainer LASS, STELLA, EVENT_BEAT_LASS_STELLA, LassStellaSeenText, LassStellaBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext LassStellaAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SailorArnoldSeenText: 
+	text "You want a shot"
+	line "at JASMINE? Think"
+	cont "again!"
+	done
+
+SailorArnoldBeatenText:
+	text "Ooof..."
+	done
+
+SailorArnoldAfterBattleText:
+	text "Alright go ahead."
+	line "Shoot your shot,"
+	cont "my guy."
+	done
+
+LassStellaSeenText:
+	text "See if you can"
+	line "get past my"
+	cont "FORRETRESS!"
+	done
+
+LassStellaAfterBattleText:
+	text "Meanie...."
+	done
+
+LassStellaBeatenText:
+	text "I'll try harder"
+	line "next time..."
+	done
+
+
 OlivineGymGuideText:
 	text "JASMINE uses the"
 	line "newly discovered"
@@ -195,7 +288,7 @@ OlivineGymGuidePreText:
 	cont "sionate."
 	done
 
-OlivineGym_MapEvents:
+OlivineGym_MapEvents: ;have to add Sailor Arnold and Lass Stella map events
 	db 0, 0 ; filler
 
 	def_warp_events
@@ -211,3 +304,5 @@ OlivineGym_MapEvents:
 	def_object_events
 	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_OLIVINE_GYM_JASMINE
 	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineGymGuideScript, -1
+	object_event  7,  8, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSailorArnold, EVENT_OLIVINE_GYM_JASMINE ;custom
+	object_event  3,  10, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassStella, EVENT_OLIVINE_GYM_JASMINE ;custom

@@ -298,6 +298,7 @@ TrainerCooltrainermAllen:
 	end
 
 Route44Sign1:
+	;setevent EVENT_OPENED_MT_SILVER ;test
 	jumptext Route44Sign1Text
 
 Route44Sign2:

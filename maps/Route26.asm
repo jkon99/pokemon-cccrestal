@@ -7,6 +7,8 @@
 	const ROUTE26_FISHER
 	const ROUTE26_FRUIT_TREE
 	const ROUTE26_POKE_BALL
+	; add a person in 12, 8 that warps you to new bark town, there will be a person there to warp back. have event set
+	; add a person in 13, 8 that heals you
 
 Route26_MapScripts:
 	def_scene_scripts

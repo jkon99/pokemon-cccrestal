@@ -27,6 +27,7 @@ INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
 
 
+
 SECTION "Songs 2", ROMX
 
 INCLUDE "audio/music/route1.asm"
@@ -159,6 +160,11 @@ SECTION "Crystal Sound Effects", ROMX
 
 INCLUDE "audio/sfx_crystal.asm"
 
+SECTION "Custom Tracks", ROMX ;custom tracks
+
+INCLUDE "audio/music/kantochamp.asm" 
+INCLUDE "audio/music/route47.asm"
+INCLUDE "audio/music/ceruleancave.asm"
 
 SECTION "Cries", ROMX
 

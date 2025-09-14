@@ -261,7 +261,7 @@ Kurt1:
 
 .CanGiveGSBallToKurt:
 	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iftrue .GaveGSBallToKurt
+	iftrue .NotMakingBalls ; iftrue .GaveGSBallToKurt
 	checkitem GS_BALL
 	iffalse .NoGSBall
 	writetext KurtsHouseKurtWhatIsThatText
@@ -269,12 +269,12 @@ Kurt1:
 	closetext
 	setevent EVENT_GAVE_GS_BALL_TO_KURT
 	takeitem GS_BALL
-	setflag ENGINE_KURT_MAKING_BALLS
+	;setflag ENGINE_KURT_MAKING_BALLS
 	end
 
 .GaveGSBallToKurt:
-	checkflag ENGINE_KURT_MAKING_BALLS
-	iffalse .NotMakingBalls
+	;checkflag ENGINE_KURT_MAKING_BALLS
+	;iffalse .NotMakingBalls
 	writetext KurtsHouseKurtImCheckingItNowText
 	waitbutton
 	writetext KurtsHouseKurtAhHaISeeText

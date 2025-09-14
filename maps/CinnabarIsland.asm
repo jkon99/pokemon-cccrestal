@@ -1,15 +1,36 @@
+;EXPORT LoadUsedSpritesGFX
+
 	object_const_def
 	const CINNABARISLAND_BLUE
+	;const CINNABARISLAND_MOLTRES
 
 CinnabarIsland_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+	;callback MAPCALLBACK_TILES, .ForceSpriteLoad
 	callback MAPCALLBACK_NEWMAP, CinnabarIslandFlypointCallback
-
+	;callback MAPCALLBACK_OBJECTS, CinnabarIslandMoltresCallback
+/*
+.ForceSpriteLoad: ;try use this to fix sprite load
+    callasm LoadUsedSpritesGFX
+    endcallback
+*/
 CinnabarIslandFlypointCallback:
 	setflag ENGINE_FLYPOINT_CINNABAR
 	endcallback
+/*
+ CinnabarIslandMoltresCallback:
+ 	checkevent EVENT_OPENED_MT_SILVER 
+	iffalse .Hide
+	checkevent EVENT_FOUGHT_MOLTRES
+	iftrue .Hide
+	appear CINNABARISLAND_MOLTRES
+	endcallback
+
+.Hide:
+	disappear CINNABARISLAND_MOLTRES
+	endcallback */
 
 CinnabarIslandBlue:
 	faceplayer
@@ -24,6 +45,7 @@ CinnabarIslandBlue:
 	end
 
 CinnabarIslandGymSign:
+	;setevent EVENT_OPENED_MT_SILVER ;test
 	jumptext CinnabarIslandGymSignText
 
 CinnabarIslandSign:
@@ -115,6 +137,10 @@ CinnabarIslandGymSignText:
 	line "relocated to SEA-"
 	cont "FOAM ISLANDS."
 
+	para "WARNING fiery bird"
+	line "Moltres spotted in"
+	cont "the area."
+
 	para "BLAINE"
 	done
 
@@ -124,12 +150,32 @@ CinnabarIslandSignText:
 	para "The Fiery Town of"
 	line "Burning Desire"
 	done
+/*
+CinnabarIslandMoltresScript: ; works but spawning in kris sprite instead of bird
+	faceplayer
+	opentext
+	writetext MoltresText
+	cry MOLTRES
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_MOLTRES
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon MOLTRES, 60
+	startbattle
+	disappear CINNABARISLAND_MOLTRES
+	reloadmapafterbattle
+	end
+
+MoltresText:
+	text "Gyaoo!"
+	done */
 
 CinnabarIsland_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
 	warp_event 11, 11, CINNABAR_POKECENTER_1F, 1
+	warp_event 8 , 5, LEGENDS_CAVE, 3
 
 	def_coord_events
 
@@ -141,3 +187,4 @@ CinnabarIsland_MapEvents:
 
 	def_object_events
 	object_event  9,  6, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandBlue, EVENT_BLUE_IN_CINNABAR
+	;object_event 8, 6, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CinnabarIslandMoltresScript, EVENT_TEMP  ; moltres spawns after mt silver accessible

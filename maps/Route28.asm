@@ -25,5 +25,6 @@ Route28_MapEvents:
 	def_bg_events
 	bg_event 31,  5, BGEVENT_READ, Route28Sign
 	bg_event 25,  2, BGEVENT_ITEM, Route28HiddenRareCandy
+	; spawn 24, 6 add moltres encounter, SPRITE_BIRD
 
 	def_object_events

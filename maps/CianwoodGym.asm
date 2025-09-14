@@ -17,6 +17,8 @@ CianwoodGym_MapScripts:
 CianwoodGymChuckScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchChuck
 	checkevent EVENT_BEAT_CHUCK
 	iftrue .FightDone
 	writetext ChuckIntroText1
@@ -66,12 +68,45 @@ CianwoodGymChuckScript:
 	closetext
 	end
 
+.RematchChuck:
+	writetext ChuckText_Rematch
+	yesorno
+	iffalse .ChuckRefuse
+	writetext ChuckIntroText3
+	waitbutton
+	closetext
+	winlosstext ChuckLossText, 0
+	loadtrainer CHUCK, CHUCK2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext ChuckText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.ChuckRefuse:
+	writetext ChuckText_RematchEnd
+	waitbutton
+	closetext
+	end
+
 .AlreadyGotTM:
 	writetext ChuckAfterText
 	waitbutton
 .BagFull:
 	closetext
 	end
+
+ChuckText_Rematch:
+	text "Care for a" 
+	line "rematch?"
+	done
+
+ChuckText_RematchEnd:
+	text "Oh well..."
+	done
+
 
 CianwoodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

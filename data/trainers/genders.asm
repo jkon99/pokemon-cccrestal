@@ -5,7 +5,7 @@ BTTrainerClassGenders:
 	table_width 1
 	db MALE   ; FALKNER
 	db FEMALE ; WHITNEY
-	db FEMALE ; BUGSY
+	db MALE ; BUGSY fixed to be male
 	db MALE   ; MORTY
 	db MALE   ; PRYCE
 	db FEMALE ; JASMINE
@@ -13,7 +13,7 @@ BTTrainerClassGenders:
 	db FEMALE ; CLAIR
 	db MALE   ; RIVAL1
 	db MALE   ; POKEMON_PROF
-	db FEMALE ; WILL
+	db MALE ; WILL
 	db MALE   ; CAL
 	db MALE   ; BRUNO
 	db FEMALE ; KAREN
@@ -68,5 +68,19 @@ BTTrainerClassGenders:
 	db MALE   ; RED
 	db MALE   ; BLUE
 	db MALE   ; OFFICER
-	db FEMALE ; GRUNTF
-	assert_table_length NUM_TRAINER_CLASSES - 1 ; exclude MYSTICALMAN
+	db FEMALE ; GRUNTF ; 
+/*	db MALE       ; mysticalman
+	db MALE		; JON
+	db MALE		; ALEX
+	db FEMALE		; ASH
+	db MALE		; CONNOR
+	db MALE		; FRANCIS
+	db FEMALE		; GENNA
+	db FEMALE		; LEX
+	db MALE		; NAHOM
+	db MALE		; NANDO
+	db MALE		; QASIM
+	db FEMALE		; QUINN
+	db FEMALE		; TJ */
+	assert_table_length NUM_TRAINER_CLASSES -13 ; exclude MYSTICALMAN
+	; assert_table_length NUM_TRAINER_CLASSES - 1, but set it to -13 unless you end up gendering eusine and new trainers

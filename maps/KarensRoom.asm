@@ -49,7 +49,15 @@ KarenScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KarenScript_KarenBeatenText, 0
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .LoadRematch
 	loadtrainer KAREN, KAREN1
+	jump .StartBattle
+
+.LoadRematch:
+	loadtrainer KAREN, KAREN2 ; rematch after mt silver opened
+	
+.StartBattle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN

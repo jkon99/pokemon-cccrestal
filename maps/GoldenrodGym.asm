@@ -21,9 +21,11 @@ GoldenrodGymNoop2Scene:
 
 GoldenrodGymWhitneyScript:
 	faceplayer
+	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchWhitney
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
-	opentext
 	writetext WhitneyBeforeText
 	waitbutton
 	closetext
@@ -43,6 +45,28 @@ GoldenrodGymWhitneyScript:
 	checkevent EVENT_MADE_WHITNEY_CRY
 	iffalse .StoppedCrying
 	writetext WhitneyYouMeanieText
+	waitbutton
+	closetext
+	end
+.RematchWhitney:
+	writetext WhitneyText_Rematch
+	yesorno
+	iffalse .WhitneyRefuse
+	writetext WhitneyBeforeText
+	waitbutton
+	closetext
+	winlosstext WhitneyShouldntBeSoSeriousText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext WhitneyText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.WhitneyRefuse:
+	writetext WhitneyText_RematchEnd
 	waitbutton
 	closetext
 	end
@@ -78,6 +102,15 @@ GoldenrodGymWhitneyScript:
 .NoRoomForAttract:
 	closetext
 	end
+
+WhitneyText_Rematch:
+	text "Care for a" ;add prompt yes/no
+	line "rematch?"
+	done
+
+WhitneyText_RematchEnd:
+	text "Oh well..."
+	done
 
 GoldenrodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets

@@ -153,7 +153,7 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	waitbutton
 	setval PIKACHU
 	special GameCornerPrizeMonCheckDex
-	givepoke PIKACHU, 25
+	givepoke PIKACHU, 50 ; lv 15 to 50
 	takecoins CELADONGAMECORNERPRIZEROOM_PIKACHU_COINS
 	sjump .loop
 
@@ -171,7 +171,7 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	waitbutton
 	setval PORYGON
 	special GameCornerPrizeMonCheckDex
-	givepoke PORYGON, 15
+	givepoke PORYGON, 50 ; lv 15 to 50
 	takecoins CELADONGAMECORNERPRIZEROOM_PORYGON_COINS
 	sjump .loop
 
@@ -189,7 +189,7 @@ CeladonGameCornerPrizeRoomPokemonVendor:
 	waitbutton
 	setval LARVITAR
 	special GameCornerPrizeMonCheckDex
-	givepoke LARVITAR, 40
+	givepoke LARVITAR, 50 ; lv 40 to 50
 	takecoins CELADONGAMECORNERPRIZEROOM_LARVITAR_COINS
 	sjump .loop
 

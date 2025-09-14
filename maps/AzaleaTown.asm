@@ -184,6 +184,10 @@ AzaleaTownSign:
 	jumptext AzaleaTownSignText
 
 KurtsHouseSign:
+	;setflag ENGINE_FOREST_IS_RESTLESS ; to fix gs ball event
+	;clearevent EVENT_ILEX_FOREST_LASS ; to fix gs ball event
+	;setevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS ; to fix gs ball event
+	;setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	jumptext KurtsHouseSignText
 
 AzaleaGymSign:

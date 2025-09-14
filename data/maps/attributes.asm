@@ -695,3 +695,8 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes Route47, ROUTE_47, $00, 0 ;new
+	map_attributes CianwoodCave, CIANWOOD_CAVE, $00, 0 ;new
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $00, 0 ;new
+	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $00, 0 ;new
+	map_attributes LegendsCave, LEGENDS_CAVE, $00, 0 ; new

@@ -28,3 +28,5 @@ Flypoints:
 	db LANDMARK_CINNABAR_ISLAND,  SPAWN_CINNABAR
 	db LANDMARK_INDIGO_PLATEAU,   SPAWN_INDIGO
 	db -1 ; end
+
+	; add fly to top of route 26 before victory road

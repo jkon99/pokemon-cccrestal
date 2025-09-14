@@ -131,6 +131,7 @@ CinnabarGroupSprites:
 	db SPRITE_SWIMMER_GUY
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_BIRD ; added to fix moltres
 
 CeruleanGroupSprites:
 	db SPRITE_SUICUNE
@@ -156,6 +157,7 @@ CeruleanGroupSprites:
 	db SPRITE_MISTY
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
+	db SPRITE_BIRD ; added to fix zapdos
 
 SaffronGroupSprites:
 	db SPRITE_SUICUNE
@@ -506,6 +508,8 @@ CianwoodGroupSprites:
 	db SPRITE_TAUROS
 	db SPRITE_FRUIT_TREE
 	db SPRITE_ROCK
+	db SPRITE_MONSTER ;added to fix mew
+	db SPRITE_POKE_BALL ;added to fix pokeball
 
 OlivineGroupSprites:
 	db SPRITE_SUICUNE

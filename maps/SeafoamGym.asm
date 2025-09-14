@@ -11,9 +11,11 @@ SeafoamGym_MapScripts:
 SeafoamGymNoopScene:
 	end
 
-SeafoamGymBlaineScript:
+SeafoamGymBlaineScript: 
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchBlaine
 	checkflag ENGINE_VOLCANOBADGE
 	iftrue .FightDone
 	writetext BlaineIntroText
@@ -33,15 +35,64 @@ SeafoamGymBlaineScript:
 	waitsfx
 	setflag ENGINE_VOLCANOBADGE
 	writetext BlaineAfterBattleText
-	waitbutton
-	closetext
-	end
+	sjump .AfterBattle
 
 .FightDone:
 	writetext BlaineFightDoneText
 	waitbutton
 	closetext
 	end
+
+.AfterBattle:
+	writetext BlaineSunnyDayText
+	promptbutton
+	verbosegiveitem TM_SUNNY_DAY
+	setevent EVENT_GOT_TM_SUNNY_DAY
+	waitbutton
+	closetext
+	end
+
+.RematchBlaine:
+	writetext BlaineText_Rematch
+	yesorno
+	iffalse .BlaineRefuse
+	writetext BlaineIntroText
+	waitbutton
+	closetext
+	winlosstext BlaineWinLossText, 0
+	loadtrainer BLAINE, BLAINE2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext BlaineText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.BlaineRefuse:
+	writetext BlaineText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+BlaineText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+BlaineText_RematchEnd:
+	text "Oh well..."
+	done
+
+BlaineSunnyDayText:
+	text "By the way you"
+	line "deserve this as"
+	cont "well!"
+
+	para "Its SUNNY DAY"
+	line "to make your fire"
+	cont "types shine!"
+	done
 
 SeafoamGymGuideScript:
 	faceplayer

@@ -49,7 +49,15 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .LoadRematch
 	loadtrainer BRUNO, BRUNO1
+	jump .StartBattle
+
+.LoadRematch:
+	loadtrainer BRUNO, BRUNO2 ; rematch after mt silver opened
+	
+.StartBattle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO

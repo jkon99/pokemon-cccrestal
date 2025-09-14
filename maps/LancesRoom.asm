@@ -57,7 +57,15 @@ LancesRoomLanceScript:
 	closetext
 	winlosstext LanceBattleWinText, 0
 	setlasttalked LANCESROOM_LANCE
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .LoadRematch
 	loadtrainer CHAMPION, LANCE
+	jump .StartBattle 
+
+.LoadRematch:
+	loadtrainer CHAMPION, LANCE2 ; rematch after mt silver opened
+	
+.StartBattle:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

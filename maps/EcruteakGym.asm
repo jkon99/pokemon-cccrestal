@@ -24,6 +24,8 @@ EcruteakGymNoopScene:
 EcruteakGymMortyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchMorty
 	checkevent EVENT_BEAT_MORTY
 	iftrue .FightDone
 	writetext MortyIntroText
@@ -61,6 +63,29 @@ EcruteakGymMortyScript:
 	closetext
 	end
 
+.RematchMorty:
+	writetext MortyText_Rematch
+	yesorno
+	iffalse .MortyRefuse
+	writetext MortyIntroText
+	waitbutton
+	closetext
+	winlosstext MortyWinLossText, 0
+	loadtrainer MORTY, MORTY2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext MortyText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.MortyRefuse:
+	writetext MortyText_RematchEnd
+	waitbutton
+	closetext
+	end
+
 .GotShadowBall:
 	writetext MortyFightDoneText
 	waitbutton
@@ -68,6 +93,15 @@ EcruteakGymMortyScript:
 	closetext
 	end
 
+MortyText_Rematch:
+	text "Care for a" 
+	line "rematch?"
+	done
+
+MortyText_RematchEnd:
+	text "Oh well..."
+	done
+	
 EcruteakGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
 	ifequal 6, .GoldenrodRockets

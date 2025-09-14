@@ -12,9 +12,13 @@ UnionCaveB2F_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, UnionCaveB2FLaprasCallback
 
-UnionCaveB2FLaprasCallback:
+UnionCaveB2FLaprasCallback: ; code adjusted so Lapras appears every day
 	checkflag ENGINE_UNION_CAVE_LAPRAS
-	iftrue .NoAppear
+	iftrue .Done ;.NoAppear
+	appear UNIONCAVEB2F_LAPRAS
+	.Done:
+	endcallback
+	/*
 	readvar VAR_WEEKDAY
 	ifequal FRIDAY, .Appear
 .NoAppear:
@@ -24,11 +28,11 @@ UnionCaveB2FLaprasCallback:
 .Appear:
 	appear UNIONCAVEB2F_LAPRAS
 	endcallback
-
+*/
 UnionCaveLapras:
 	faceplayer
 	cry LAPRAS
-	loadwildmon LAPRAS, 20
+	loadwildmon LAPRAS, 28
 	startbattle
 	disappear UNIONCAVEB2F_LAPRAS
 	setflag ENGINE_UNION_CAVE_LAPRAS

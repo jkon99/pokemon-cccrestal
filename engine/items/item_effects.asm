@@ -337,21 +337,22 @@ PokeBallEffect:
 	ld a, 1
 .statuscheck
 ; BUG: BRN/PSN/PAR do not affect catch rate (see docs/bugs_and_glitches.md)
-	ld b, a
-	ld a, [wEnemyMonStatus]
-	and 1 << FRZ | SLP_MASK
-	ld c, 10
-	jr nz, .addstatus
-	and a
-	ld c, 5
-	jr nz, .addstatus
-	ld c, 0
-.addstatus
-	ld a, b
-	add c
-	jr nc, .max_1
-	ld a, $ff
-.max_1
+ 	ld b, a
+ 	ld a, [wEnemyMonStatus]
+ 	and 1 << FRZ | SLP_MASK
+ 	ld c, 10
+ 	jr nz, .addstatus
+	ld a, [wEnemyMonStatus] ; fix
+ 	and a
+ 	ld c, 5
+ 	jr nz, .addstatus
+ 	ld c, 0
+ .addstatus
+ 	ld a, b
+ 	add c
+ 	jr nc, .max_1
+ 	ld a, $ff
+ .max_1
 
 ; BUG: HELD_CATCH_CHANCE has no effect (see docs/bugs_and_glitches.md)
 	ld d, a
@@ -757,6 +758,7 @@ HeavyBall_GetDexEntryBank:
 	push hl
 	push de
 	ld a, [wEnemyMonSpecies]
+	dec a ; fix
 	rlca
 	rlca
 	maskbits NUM_DEX_ENTRY_BANKS
@@ -921,7 +923,8 @@ MoonBallMultiplier:
 	push bc
 	ld a, BANK("Evolutions and Attacks")
 	call GetFarByte
-	cp MOON_STONE_RED ; BURN_HEAL
+	cp MOON_STONE ; fix
+	;cp MOON_STONE_RED ; BURN_HEAL
 	pop bc
 	ret nz
 
@@ -978,7 +981,8 @@ LoveBallMultiplier:
 	pop de
 	cp d
 	pop bc
-	ret nz
+	;ret nz
+	ret z ; fix
 
 	sla b
 	jr c, .max
@@ -1012,7 +1016,8 @@ FastBallMultiplier:
 	cp -1
 	jr z, .next
 	cp c
-	jr nz, .next
+	;jr nz, .next
+	jr nz, .loop ;fix
 	sla b
 	jr c, .max
 

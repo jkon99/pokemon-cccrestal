@@ -1,14 +1,16 @@
 	object_const_def
-	const CELADONMANSION3F_COOLTRAINER_M
+	;const CELADONMANSION3F_COOLTRAINER_M
 	const CELADONMANSION3F_GYM_GUIDE
 	const CELADONMANSION3F_SUPER_NERD
 	const CELADONMANSION3F_FISHER
+	const CELADONMANSION3F_JON
 
 CeladonMansion3F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
+/*
 GameFreakGameDesignerScript:
 	faceplayer
 	opentext
@@ -32,7 +34,7 @@ GameFreakGameDesignerScript:
 	closetext
 	setevent EVENT_ENABLE_DIPLOMA_PRINTING
 	end
-
+*/
 GameFreakGraphicArtistScript:
 	faceplayer
 	opentext
@@ -80,7 +82,7 @@ CeladonMansion3FGameProgram:
 
 CeladonMansion3FReferenceMaterial:
 	jumptext CeladonMansion3FReferenceMaterialText
-
+/*
 GameFreakGameDesignerText:
 	text "Is that right?"
 
@@ -112,7 +114,7 @@ GameFreakGameDesignerAfterDiplomaText:
 	para "You should go show"
 	line "it off."
 	done
-
+*/
 GameFreakGraphicArtistText:
 	text "I'm the GRAPHIC"
 	line "ARTIST."
@@ -187,6 +189,102 @@ CeladonMansion3FReferenceMaterialText:
 	cont "a # DOLL."
 	done
 
+DeveloperJonScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_DEVELOPER_JON
+	iftrue .JonRematch
+	writetext Jon_Intro
+	yesorno
+	iffalse .JonRefuse
+	writetext Jon_Fight
+	waitbutton
+	closetext
+	winlosstext Jon_BetterTrainer, 0
+	loadtrainer JON, JON1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_DEVELOPER_JON
+	opentext
+	writetext Jon_Beat
+	waitbutton
+	closetext
+	verbosegiveitem GS_BALL
+	setevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	;setflag ENGINE_FOREST_IS_RESTLESS ; to fix gs ball event
+	;clearevent EVENT_ILEX_FOREST_LASS ; to fix gs ball event
+	;setevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS ; to fix gs ball event
+	end
+.JonRematch:
+	writetext Jon_Rematch
+	yesorno
+	iffalse .JonRefuse
+	writetext Jon_Fight
+	waitbutton
+	closetext
+	winlosstext Jon_BetterTrainer, 0
+	loadtrainer JON, JON1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_DEVELOPER_JON
+	opentext
+	writetext Jon_Beat
+	waitbutton
+	closetext
+	end
+.JonRefuse:
+	writetext Jon_Refuse
+	waitbutton
+	closetext
+	end
+
+
+Jon_Intro:
+	text "Hey! I am JON!"
+	line "The developer of"
+	cont "this hack!"
+
+	para "Some of my friends"
+	line "call me KAZ."
+
+	para "Anyways, I am"
+	line "not much to talk."
+	cont "How about..."
+
+	para "A battle!"
+	line "What do ya say?"
+	done
+
+Jon_Rematch:
+	text "Hello again!"
+	line "Care for another"
+	cont "battle?"
+	done
+
+Jon_Refuse:
+	text "Ahh...maybe"
+	line "another time."
+	done
+
+Jon_Fight:
+	text "Thats the spirit!"
+	line "No holding back!"
+	done
+
+Jon_BetterTrainer:
+	text "Dang, Ive been"
+	line "beat..."
+	done
+
+Jon_Beat:
+	text "You won fair"
+	line "and square. You"
+	cont "can have this!"
+	done
+
+
+
 CeladonMansion3F_MapEvents:
 	db 0, 0 ; filler
 
@@ -205,7 +303,8 @@ CeladonMansion3F_MapEvents:
 	bg_event  1,  3, BGEVENT_UP, CeladonMansion3FReferenceMaterial
 
 	def_object_events
-	object_event  3,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GameFreakGameDesignerScript, -1
+	;object_event  3,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GameFreakGameDesignerScript, -1
 	object_event  3,  4, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GameFreakGraphicArtistScript, -1
 	object_event  0,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GameFreakProgrammerScript, -1
 	object_event  0,  4, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GameFreakCharacterDesignerScript, -1
+	object_event  3,  6, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DeveloperJonScript, -1 ;graphics glitches some reason?

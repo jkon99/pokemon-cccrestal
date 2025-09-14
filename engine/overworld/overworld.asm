@@ -138,6 +138,7 @@ AddOutdoorSprites:
 	jr nz, .loop
 	ret
 
+EXPORT LoadUsedSpritesGFX ; sprite fix?
 LoadUsedSpritesGFX:
 	ld a, MAPCALLBACK_SPRITES
 	call RunMapCallback

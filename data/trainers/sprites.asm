@@ -66,5 +66,6 @@ BTTrainerClassSprites:
 	db SPRITE_RED
 	db SPRITE_BLUE
 	db SPRITE_OFFICER
-	db SPRITE_ROCKET_GIRL
-	assert_table_length NUM_TRAINER_CLASSES - 1 ; exclude MYSTICALMAN
+	db SPRITE_ROCKET_GIRL ; dont need sprites for eusine or new trainers this is only really for battle tower
+	assert_table_length NUM_TRAINER_CLASSES - 13 ; exclude MYSTICALMAN
+	; assert_table_length NUM_TRAINER_CLASSES - 1, but set it to -13 until MYSTICALMAN solved

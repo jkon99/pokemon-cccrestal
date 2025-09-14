@@ -107,4 +107,10 @@ Music:
 	dba Music_SuicuneBattle
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
+
+; custom tracks
+	dba Music_KantoChamp
+	dba Music_Route47
+	dba Music_Cerulean_Cave
+
 	assert_table_length NUM_MUSIC_SONGS

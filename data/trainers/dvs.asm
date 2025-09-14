@@ -43,8 +43,8 @@ TrainerClassDVs:
 	dn  7,  8,  8,  8 ; SWIMMERF
 	dn  9,  8,  8,  8 ; SAILOR
 	dn  9,  8,  8,  8 ; SUPER_NERD
-; BUG: RIVAL2 has lower DVs than RIVAL1 (see docs/bugs_and_glitches.md)
-	dn  9,  8,  8,  8 ; RIVAL2
+; BUG: RIVAL2 has lower DVs than RIVAL1 (see docs/bugs_and_glitches.md), I fixed
+	dn 13, 13, 13, 13 ; RIVAL2
 	dn  9,  8,  8,  8 ; GUITARIST
 	dn 10,  8,  8,  8 ; HIKER
 	dn  9,  8,  8,  8 ; BIKER
@@ -69,5 +69,17 @@ TrainerClassDVs:
 	dn  9, 13, 13, 13 ; BLUE
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  7, 14, 10,  8 ; GRUNTF
-	dn  9,  8,  8,  8 ; MYSTICALMAN
+	dn  9,  8,  8,  8 ; MYSTICALMAN ;custom below
+	dn  8,  8,  8,  8 ; JON 
+	dn  8,  8,  8,  8 ; ALEX
+	dn  8,  8,  8,  8 ; ASH
+	dn  8,  8,  8,  8 ; CONNOR
+	dn  8,  8,  8,  8 ; FRANCIS
+	dn  8,  8,  8,  8 ; GENNA
+	dn  8,  8,  8,  8 ; LEX
+	dn  8,  8,  8,  8 ; NAHOM
+	dn  8,  8,  8,  8 ; NANDO
+	dn  8,  8,  8,  8 ; QASIM
+	dn  8,  8,  8,  8 ; QUINN
+	dn  8,  8,  8,  8 ; TJ
 	assert_table_length NUM_TRAINER_CLASSES

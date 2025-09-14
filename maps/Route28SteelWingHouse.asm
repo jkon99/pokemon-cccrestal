@@ -14,7 +14,7 @@ Route28SteelWingHouseNoopScene:
 Celebrity:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM47_STEEL_WING
+	checkevent EVENT_GOT_TM47_STEEL_WING ; should give tm steel wing in sandstorm house, have this lady give something else
 	iftrue .AlreadyGotItem
 	writetext CelebrityText1
 	promptbutton

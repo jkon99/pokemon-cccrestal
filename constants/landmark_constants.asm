@@ -49,6 +49,8 @@ DEF JOHTO_LANDMARK EQU const_value
 	const LANDMARK_DARK_CAVE         ; 2c
 	const LANDMARK_ROUTE_46          ; 2d
 	const LANDMARK_SILVER_CAVE       ; 2e
+	const LANDMARK_CIANWOOD_CAVE     ; 2f new
+	const LANDMARK_ROUTE_47          ; 2g new
 DEF JOHTO_LANDMARK_LAST EQU const_value - 1
 
 DEF KANTO_LANDMARK EQU const_value
@@ -100,6 +102,10 @@ DEF KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_27          ; 5c
 	const LANDMARK_TOHJO_FALLS       ; 5d
 	const LANDMARK_ROUTE_28          ; 5e
+	const LANDMARK_CERULEAN_CAVE_1F  ; 5f new
+	const LANDMARK_CERULEAN_CAVE_B1F ; 5g new
+	const LANDMARK_LEGENDS_CAVE ; 5h new
+
 DEF KANTO_LANDMARK_LAST EQU const_value - 1
 
 DEF OTHER_LANDMARK EQU const_value

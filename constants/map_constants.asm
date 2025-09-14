@@ -154,6 +154,7 @@ ENDM
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 91
+	map_const LEGENDS_CAVE,									15, 14 ; 92 new
 	endgroup
 
 	newgroup ECRUTEAK                                             ;  4
@@ -210,6 +211,8 @@ ENDM
 	map_const ROUTE_24,                                    10,  9 ; 15
 	map_const ROUTE_25,                                    30,  9 ; 16
 	map_const CERULEAN_CITY,                               20, 18 ; 17
+	map_const CERULEAN_CAVE_1F,								15, 9 ; 18
+	map_const CERULEAN_CAVE_B1F,							15, 9 ; 18
 	endgroup
 
 	newgroup AZALEA                                               ;  8
@@ -435,6 +438,8 @@ ENDM
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const ROUTE_40_BATTLE_TOWER_GATE,                   5,  4 ; 15
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
+	map_const CIANWOOD_CAVE,								 9, 5 ;17
+	map_const ROUTE_47, 									30, 9 ;18
 	endgroup
 
 	newgroup VIRIDIAN                                             ; 23

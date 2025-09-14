@@ -484,5 +484,10 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/CianwoodCave.asm" ; new
+INCLUDE "maps/CeruleanCave1F.asm" ; new
+INCLUDE "maps/CeruleanCaveB1F.asm" ; new
+INCLUDE "maps/Route47.asm" ; new
+INCLUDE "maps/LegendsCave.asm" ; new
 
 ENDSECTION

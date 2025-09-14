@@ -59,6 +59,8 @@ CeruleanGymGruntRunsOutScript:
 CeruleanGymMistyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchMisty
 	checkflag ENGINE_CASCADEBADGE
 	iftrue .FightDone
 	writetext MistyIntroText
@@ -77,11 +79,63 @@ CeruleanGymMistyScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
+	sjump .AfterBattle
 .FightDone:
 	writetext MistyFightDoneText
 	waitbutton
 	closetext
 	end
+
+.AfterBattle:
+	writetext MistyRainDanceText
+	promptbutton
+	verbosegiveitem TM_RAIN_DANCE
+	setevent EVENT_GOT_TM_RAIN_DANCE
+	waitbutton
+	closetext
+	end
+
+.RematchMisty:
+	writetext MistyText_Rematch
+	yesorno
+	iffalse .MistyRefuse
+	writetext MistyIntroText
+	waitbutton
+	closetext
+	winlosstext MistyWinLossText, 0
+	loadtrainer MISTY, MISTY2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext MistyText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.MistyRefuse:
+	writetext MistyText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+MistyText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+MistyText_RematchEnd:
+	text "Oh well..."
+	done
+
+MistyRainDanceText:
+	text "By the way you"
+	line "deserve this as"
+	cont "well!"
+
+	para "Its RAIN DANCE,"
+	line "turns the tides"
+	cont "to water teams!"
+	done
 
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script

@@ -1,15 +1,19 @@
 	object_const_def
 	const VIRIDIANGYM_BLUE
 	const VIRIDIANGYM_GYM_GUIDE
+	const VIRIDIANGYM_COOLTRAINERM
+	const VIRIDIANGYM_COOLTRAINERF
 
 ViridianGym_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-ViridianGymBlueScript:
+ViridianGymBlueScript: ; added getting Psych Up tm
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchBlue
 	checkflag ENGINE_EARTHBADGE
 	iftrue .FightDone
 	writetext LeaderBlueBeforeText
@@ -25,16 +29,58 @@ ViridianGymBlueScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_EARTHBADGE
-	writetext LeaderBlueAfterText
-	waitbutton
-	closetext
-	end
-
+	sjump .AfterBattle
 .FightDone:
 	writetext LeaderBlueEpilogueText
 	waitbutton
 	closetext
 	end
+.AfterBattle:
+	checkevent EVENT_GOT_TM09_PSYCHUP ; maybe do a check to see if no room
+	iftrue .AfterTM
+	writetext LeaderBluePsychUpText
+	promptbutton
+	verbosegiveitem TM_PSYCH_UP
+	iffalse .AfterTM
+	setevent EVENT_GOT_TM09_PSYCHUP
+
+.AfterTM:
+	writetext LeaderBlueAfterText
+	waitbutton
+	closetext
+	end
+
+.RematchBlue:
+	writetext BlueText_Rematch
+	yesorno
+	iffalse .BlueRefuse
+	writetext LeaderBlueBeforeText
+	waitbutton
+	closetext
+	winlosstext LeaderBlueWinText, 0
+	loadtrainer BLUE, BLUE2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext BlueText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.BlueRefuse:
+	writetext BlueText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+BlueText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+BlueText_RematchEnd:
+	text "Oh well..."
+	done
 
 ViridianGymGuideScript:
 	faceplayer
@@ -128,6 +174,19 @@ LeaderBlueAfterText:
 	line "it!"
 	done
 
+LeaderBluePsychUpText:
+	text "Also, take this"
+	line "good TM"
+	
+	text "Psych up is a"
+	line "move that copies"
+	cont "enemy stats."
+
+	para "A perceptive"
+	line "trainer will use"
+	cont "it well!"
+	done
+
 LeaderBlueEpilogueText:
 	text "BLUE: Listen, you."
 
@@ -167,6 +226,57 @@ ViridianGymGuideWinText:
 	line "tears to my eyes."
 	done
 
+CooltrainerKevin: 
+trainer COOLTRAINERM, KEVIN, EVENT_BEAT_COOLTRAINERKEVIN2, CooltrainerKevinSeenText, CooltrainerKevinBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerKevinAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerKevinSeenText:
+	text "We meet again..."
+	done
+
+CooltrainerKevinBeatenText:
+	text "Dont remember me"
+	line "huh..."
+	done
+
+CooltrainerKevinAfterBattleText:
+	text "Back on the"
+	line "grind..."
+	done
+
+CooltrainerQuinn:
+trainer COOLTRAINERF, QUINN, EVENT_BEAT_COOLTRAINERQUINN2, CooltrainerQuinnSeenText, CooltrainerQuinnBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CooltrainerQuinnAfterBattleText
+	waitbutton
+	closetext
+	end
+
+CooltrainerQuinnSeenText:
+	text "You gotta get"
+	line "through me first!"
+	done
+
+CooltrainerQuinnBeatenText:
+	text "Oops..."
+	done
+
+CooltrainerQuinnAfterBattleText:
+	text "Blue is so"
+	line "dreamy..."
+	done
+
+
 ViridianGym_MapEvents:
 	db 0, 0 ; filler
 
@@ -183,3 +293,5 @@ ViridianGym_MapEvents:
 	def_object_events
 	object_event  5,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianGymBlueScript, EVENT_VIRIDIAN_GYM_BLUE
 	object_event  7, 13, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianGymGuideScript, EVENT_VIRIDIAN_GYM_BLUE
+	object_event  7,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, CooltrainerKevin, EVENT_VIRIDIAN_GYM_BLUE ; new, reused from trainer in other area
+	object_event  2, 10, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, CooltrainerQuinn, EVENT_VIRIDIAN_GYM_BLUE ; new, reused from trainer in other area

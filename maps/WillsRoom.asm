@@ -49,7 +49,15 @@ WillScript_Battle:
 	waitbutton
 	closetext
 	winlosstext WillScript_WillBeatenText, 0
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .LoadRematch
 	loadtrainer WILL, WILL1
+	jump .StartBattle 
+
+.LoadRematch:
+	loadtrainer WILL, WILL2 ; rematch after mt silver opened
+
+.StartBattle:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL

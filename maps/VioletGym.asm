@@ -12,6 +12,8 @@ VioletGym_MapScripts:
 VioletGymFalknerScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchFalkner
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
 	writetext FalknerIntroText
@@ -45,6 +47,28 @@ VioletGymFalknerScript:
 	waitbutton
 	closetext
 	end
+.RematchFalkner:
+	writetext FalknerText_Rematch
+	yesorno
+	iffalse .FalknerRefuse
+	writetext FalknerIntroText
+	waitbutton
+	closetext
+	winlosstext FalknerWinLossTextR, 0
+	loadtrainer FALKNER, FALKNER2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext FalknerText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.FalknerRefuse:
+	writetext FalknerText_RematchEnd
+	waitbutton
+	closetext
+	end
 
 .SpeechAfterTM:
 	writetext FalknerFightDoneText
@@ -52,6 +76,15 @@ VioletGymFalknerScript:
 .NoRoomForMudSlap:
 	closetext
 	end
+
+FalknerText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+FalknerText_RematchEnd:
+	text "Oh well..."
+	done
 
 VioletGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -144,6 +177,12 @@ FalknerWinLossText:
 	para "It's the official"
 	line "#MON LEAGUE"
 	cont "ZEPHYRBADGE."
+	done
+
+FalknerWinLossTextR:
+	text "…Darn! My dad's"
+	line "cherished bird"
+	cont "#MON…"
 	done
 
 ReceivedZephyrBadgeText:

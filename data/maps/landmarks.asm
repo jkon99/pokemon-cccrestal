@@ -3,7 +3,7 @@ MACRO landmark
 	db \1 + 8, \2 + 16
 	dw \3
 ENDM
-
+; x and y refers to pokegear map
 Landmarks:
 ; entries correspond to constants/landmark_constants.asm
 	table_width 4
@@ -54,6 +54,8 @@ Landmarks:
 	landmark 112,  72, DarkCaveName
 	landmark 124,  88, Route46Name
 	landmark 148,  68, SilverCaveName
+	landmark  20, 100, CianwoodCaveName ; new, adjust to left when need
+	landmark  20, 100, Route47Name ; new, adjust to left when need
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 108, PalletTownName
 	landmark  52,  92, Route1Name
@@ -104,6 +106,9 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
+	landmark 100,  52, CeruleanCave1FName ;new
+	landmark 100,  52, CeruleanCaveB1FName ;new
+	landmark 52, 54, LegendsCaveName ; new
 	assert_table_length NUM_LANDMARKS
 
 NewBarkTownName:     db "NEW BARK<BSP>TOWN@"
@@ -198,6 +203,11 @@ Route43Name:         db "ROUTE 43@"
 Route44Name:         db "ROUTE 44@"
 Route45Name:         db "ROUTE 45@"
 Route46Name:         db "ROUTE 46@"
+Route47Name:         db "ROUTE 47@" ;new
+CianwoodCaveName:    db "Cianwood Cave@" ;new
+CeruleanCave1FName:  db "Cerulean Cave@" ; new
+CeruleanCaveB1FName:  db "Cerulean Cave@" ; new
+LegendsCaveName:	 db "Legends Cave@" ; new
 DarkCaveName:        db "DARK CAVE@"
 IlexForestName:      db "ILEX<BSP>FOREST@"
 BurnedTowerName:     db "BURNED<BSP>TOWER@"

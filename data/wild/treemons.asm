@@ -31,10 +31,10 @@ TreeMonSet_Canyon:
 ; rare
 	db 50, SPEAROW,    10
 	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 15, HERACROSS,  15
 	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db  5, AIPOM,      15
+	db  5, AIPOM,      15
 	db -1
 
 TreeMonSet_Town:
@@ -49,10 +49,10 @@ TreeMonSet_Town:
 ; rare
 	db 50, SPEAROW,    10
 	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 15, HERACROSS,  15
 	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db  5, AIPOM,      15
+	db  5, AIPOM,      15
 	db -1
 
 TreeMonSet_Route:
@@ -61,52 +61,52 @@ TreeMonSet_Route:
 	db 15, SPINARAK,   10
 	db 15, LEDYBA,     10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, EXEGGCUTE,  15
+	db  5, EXEGGCUTE,  15
 	db -1
 ; rare
 	db 50, HOOTHOOT,   10
 	db 15, PINECO,     10
-	db 15, PINECO,     10
+	db 15, PINECO,     15
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, EXEGGCUTE,  15
+	db  5, EXEGGCUTE,  15
 	db -1
 
 TreeMonSet_Kanto:
 ; common
-	db 50, HOOTHOOT,   10
-	db 15, EKANS,      10
-	db 15, HOOTHOOT,   10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 50, HOOTHOOT,   40
+	db 15, EKANS,      40
+	db 15, HOOTHOOT,   40
+	db 10, EXEGGCUTE,  40
+	db  5, EXEGGCUTE,  40
+	db  5, EXEGGCUTE,  40
 	db -1
 ; rare
-	db 50, HOOTHOOT,   10
-	db 15, PINECO,     10
-	db 15, PINECO,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 50, HOOTHOOT,   40
+	db 15, PINECO,     40
+	db 15, PINECO,     40
+	db 10, EXEGGCUTE,  40
+	db  5, EXEGGCUTE,  40
+	db  5, EXEGGCUTE,  40
 	db -1
 
 TreeMonSet_Lake:
 ; common
-	db 50, HOOTHOOT,   10
-	db 15, VENONAT,    10
-	db 15, HOOTHOOT,   10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 50, HOOTHOOT,   20
+	db 15, VENONAT,    20
+	db 15, HOOTHOOT,   20
+	db 10, EXEGGCUTE,  20
+	db  5, EXEGGCUTE,  20
+	db  5, EXEGGCUTE,  20
 	db -1
 ; rare
-	db 50, HOOTHOOT,   10
-	db 15, PINECO,     10
-	db 15, PINECO,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 50, HOOTHOOT,   20
+	db 15, PINECO,     20
+	db 15, PINECO,     20
+	db 10, EXEGGCUTE,  20
+	db  5, EXEGGCUTE,  20
+	db  5, EXEGGCUTE,  20
 	db -1
 
 TreeMonSet_Forest:
@@ -127,7 +127,7 @@ TreeMonSet_Forest:
 	db  5, KAKUNA,     10
 	db -1
 
-TreeMonSet_Rock:
-	db 90, KRABBY,     15
-	db 10, SHUCKLE,    15
+TreeMonSet_Rock: ; fixed from 90% to 80%
+	db 80, KRABBY,     15
+	db 20, SHUCKLE,    15
 	db -1

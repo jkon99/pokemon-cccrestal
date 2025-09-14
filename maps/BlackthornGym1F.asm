@@ -29,6 +29,8 @@ BlackthornGym1FBouldersCallback:
 BlackthornGymClairScript:
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchClair
 	checkflag ENGINE_RISINGBADGE
 	iftrue .AlreadyGotBadge
 	checkevent EVENT_BEAT_CLAIR
@@ -57,6 +59,29 @@ BlackthornGymClairScript:
 
 .FightDone:
 	writetext ClairText_TooMuchToExpect
+	waitbutton
+	closetext
+	end
+
+.RematchClair:
+	writetext ClairText_Rematch
+	yesorno
+	iffalse .ClairRefuse
+	writetext ClairIntroText
+	waitbutton
+	closetext
+	winlosstext ClairWinText, 0
+	loadtrainer CLAIR, CLAIR2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext ClairText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.ClairRefuse:
+	writetext ClairText_RematchEnd
 	waitbutton
 	closetext
 	end
@@ -90,6 +115,16 @@ BlackthornGymClairScript:
 	closetext
 	end
 
+ClairText_Rematch:
+	text "Care for a" 
+	line "rematch?"
+	done
+
+ClairText_RematchEnd:
+	text "Oh well..."
+	done
+
+	
 TrainerCooltrainermPaul:
 	trainer COOLTRAINERM, PAUL, EVENT_BEAT_COOLTRAINERM_PAUL, CooltrainermPaulSeenText, CooltrainermPaulBeatenText, 0, .Script
 

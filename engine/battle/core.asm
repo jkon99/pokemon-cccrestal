@@ -6109,7 +6109,38 @@ LoadEnemyMon:
 .NotRoaming:
 ; Register a contains wBattleType
 
-; Forced shiny battle type
+; Force shiny DVs if it's FORCESHINY or SUICUNE
+	cp BATTLETYPE_FORCESHINY
+	jr z, .ForceShiny
+	cp BATTLETYPE_SUICUNE
+	jr z, .ForceShiny
+
+.GenerateDVs:
+; Generate new random DVs
+	call BattleRandom
+	ld b, a
+	call BattleRandom
+	ld c, a
+	jr .UpdateDVs
+
+.ForceShiny:
+	ld b, ATKDEFDV_SHINY ; $ea
+	ld c, SPDSPCDV_SHINY ; $aa
+
+.UpdateDVs:
+	ld hl, wEnemyMonDVs
+	ld a, b
+	ld [hli], a
+	ld [hl], c
+
+
+; We've still got more to do if we're dealing with a wild monster
+	ld a, [wBattleMode]
+	dec a
+	jr nz, .Happiness
+
+; below is og code for above
+	/* ; Forced shiny battle type
 ; Used by Red Gyarados at Lake of Rage
 	cp BATTLETYPE_FORCESHINY
 	jr nz, .GenerateDVs
@@ -6136,6 +6167,7 @@ LoadEnemyMon:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .Happiness
+*/
 
 ; Species-specfic:
 

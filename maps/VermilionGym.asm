@@ -10,9 +10,11 @@ VermilionGym_MapScripts:
 
 	def_callbacks
 
-VermilionGymSurgeScript:
+VermilionGymSurgeScript: ; add getting Thunder tm
 	faceplayer
 	opentext
+	checkevent EVENT_OPENED_MT_SILVER
+	iftrue .RematchSurge
 	checkflag ENGINE_THUNDERBADGE
 	iftrue .FightDone
 	writetext LtSurgeIntroText
@@ -32,15 +34,64 @@ VermilionGymSurgeScript:
 	waitsfx
 	setflag ENGINE_THUNDERBADGE
 	writetext LtSurgeThunderBadgeText
-	waitbutton
-	closetext
-	end
+	sjump .AfterBattle
 
 .FightDone:
 	writetext LtSurgeFightDoneText
 	waitbutton
 	closetext
 	end
+
+.AfterBattle:
+	writetext SurgeThunderText
+	promptbutton
+	verbosegiveitem TM_THUNDER
+	setevent EVENT_GOT_TM_THUNDER
+	waitbutton
+	closetext
+	end
+
+.RematchSurge:
+	writetext SurgeText_Rematch
+	yesorno
+	iffalse .SurgeRefuse
+	writetext LtSurgeIntroText
+	waitbutton
+	closetext
+	winlosstext LtSurgeWinLossText, 0
+	loadtrainer LT_SURGE, LT_SURGE2
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext SurgeText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+.SurgeRefuse:
+	writetext SurgeText_RematchEnd
+	waitbutton
+	closetext
+	end
+
+SurgeText_Rematch: 
+	text "Care for a" 
+	line "rematch?"
+	done
+
+SurgeText_RematchEnd:
+	text "Oh well..."
+	done
+
+SurgeThunderText:
+	text "By the way you"
+	line "deserve this as"
+	cont "well!"
+
+	para "Its THUNDER,"
+	line "a high risk"
+	cont "high reward move!"
+	done
 
 TrainerGentlemanGregory:
 	trainer GENTLEMAN, GREGORY, EVENT_BEAT_GENTLEMAN_GREGORY, GentlemanGregorySeenText, GentlemanGregoryBeatenText, 0, .Script

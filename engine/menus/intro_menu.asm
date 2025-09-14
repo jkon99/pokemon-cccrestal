@@ -66,13 +66,36 @@ NewGame:
 	call PlayerProfileSetup
 	call OakSpeech
 	call InitializeWorld
+;	givepoke FERALIGATR, 50 ; debug
 
 	ld a, LANDMARK_NEW_BARK_TOWN
 	ld [wPrevLandmark], a
+	;setevent EVENT_OPENED_MT_SILVER ;test
 
-	ld a, SPAWN_HOME
+	ld a, SPAWN_HOME ; SPAWN_HOME
 	ld [wDefaultSpawnpoint], a
+/*	; below is test party 
+	; Initialize the party with a Feraligatr at lv 60
+    ld a, 1                   ; Party count = 1
+    ld [wPartyCount], a
 
+    ld hl, wPartySpecies
+    ld a, FERALIGATR
+    ld [hli], a
+    xor a
+    ld [hl], a               ; End of species list
+
+    ld hl, wPartyMons
+    ld a, FERALIGATR
+    ld [hli], a              ; Species
+    ld a, 60
+    ld [hli], a              ; Level
+    ; You could continue writing stats or leave them to default
+
+    ; Mark Feraligatr in Pokédex
+    ld a, FERALIGATR
+    call SetSeenAndCaughtMon   */
+; above is test party
 	ld a, MAPSETUP_WARP
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
