@@ -17,8 +17,5 @@ To set up the repository, see [INSTALL.md](INSTALL.md).
 ## See also
 
 - [**FAQ**](FAQ.md)
-- [**Documentation**][docs]
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- [**Symbols**][symbols]
-- [**Tools**][tools]
+
 
