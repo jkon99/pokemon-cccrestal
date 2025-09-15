@@ -1,74 +1,14 @@
-;EXPORT LoadUsedSpritesGFX
-
 	object_const_def
-	;const ROUTE47_POKE_BALL1
-	;const ROUTE47_POKE_BALL2
-	;const ROUTE47_MEW
+
 	const ROUTE47_COOLTRAINERSTEVE
 	const ROUTE47_BEAUTYBRENDA
 
-/* Route47_MapScripts: ; test when spawning directly in see that sprites work right
-	def_scene_scripts
 
-	def_callbacks
-	callback MAPCALLBACK_TILES, .ForceSpriteLoad
-
-.ForceSpriteLoad:
-	callasm LoadUsedSpritesGFX
-	endcallback*/
 
 Route47_MapScripts: 
 	def_scene_scripts
 
 	def_callbacks
-	;callback MAPCALLBACK_TILES, .ForceSpriteLoad ; attempt to fix sprite
-/*	callback MAPCALLBACK_OBJECTS, Route47MewCallback
-
-.ForceSpriteLoad: ;try use this to fix sprite load
-	;setevent EVENT_TEMP
-    callasm LoadUsedSpritesGFX
-	;clearevent EVENT_TEMP
-  ; test: play sound to prove it runs
-	;playsound SFX_ITEM
-	endcallback  */
-/*
-Route47MewCallback:
-	checkevent EVENT_OPENED_MT_SILVER 
-	iffalse .Hide
-	checkevent EVENT_FOUGHT_MEW 
-	iftrue .Hide
-	appear ROUTE47_MEW 
-	;callasm LoadUsedSpritesGFX
-	endcallback
-
-.Hide:
-	disappear ROUTE47_MEW
-	endcallback */
-
-;Route47Psychic:
-;	itemball TM_PSYCHIC_M
-
-;Route47RareCandy: ; not spawning?
-;	itemball RARE_CANDY
-/*
-Route47MewScript: 
-	faceplayer
-	opentext
-	writetext MewText
-	cry MEW
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MEW
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MEW, 70
-	startbattle
-	disappear ROUTE47_MEW
-	reloadmapafterbattle
-	end
-
-MewText:
-	text "Mew!"
-	done */
 
 CooltrainerSteve: 
 trainer COOLTRAINERM, STEVE, EVENT_BEAT_COOLTRAINERM_STEVE, CooltrainerSteveSeenText, CooltrainerSteveBeatenText, 0, .Script
@@ -124,11 +64,6 @@ CooltrainerBeautyAfterBattleText:
 Route47HiddenRareCandy: 
 	hiddenitem RARE_CANDY, EVENT_ROUTE_47_RARE_CANDY
 
-/*
-Route47SignText:
-	text "ROUTE 47"
-	line "MOUNTAIN RD. AHEAD"
-	done */
 
 ; encounters for kanto starters (added)
 ; encounters work unlike cianwood cave...

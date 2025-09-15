@@ -10,6 +10,8 @@ CeladonMansion3F_MapScripts:
 
 	def_callbacks
 
+; might add back swap out diploma printing guy instead for my trainer?
+
 /*
 GameFreakGameDesignerScript:
 	faceplayer

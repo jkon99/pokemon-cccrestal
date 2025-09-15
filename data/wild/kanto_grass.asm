@@ -33,29 +33,29 @@ KantoGrassWildMons:
 	def_grass_wildmons MOUNT_MOON
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, ZUBAT
-	db 18, GEODUDE
-	db 18, SANDSHREW
-	db 22, PARAS
-	db 20, GEODUDE
-	db 18, CLEFAIRY
-	db 18, CLEFAIRY
+	db 26, ZUBAT
+	db 28, GEODUDE
+	db 28, SANDSHREW
+	db 32, PARAS
+	db 30, GEODUDE
+	db 28, CLEFAIRY
+	db 28, CLEFAIRY
 	; day
-	db 16, ZUBAT
-	db 18, GEODUDE
-	db 18, SANDSHREW
-	db 22, PARAS
-	db 20, GEODUDE
-	db 18, CLEFAIRY
-	db 18, CLEFAIRY
+	db 26, ZUBAT
+	db 28, GEODUDE
+	db 28, SANDSHREW
+	db 32, PARAS
+	db 30, GEODUDE
+	db 28, CLEFAIRY
+	db 28, CLEFAIRY
 	; nite
-	db 16, ZUBAT
-	db 18, GEODUDE
-	db 18, CLEFAIRY
-	db 22, PARAS
-	db 20, GEODUDE
-	db 22, CLEFAIRY
-	db 22, CLEFAIRY
+	db 26, ZUBAT
+	db 28, GEODUDE
+	db 28, SANDSHREW
+	db 32, PARAS
+	db 30, GEODUDE
+	db 28, CLEFAIRY
+	db 28, CLEFAIRY
 	end_grass_wildmons
 
 	def_grass_wildmons CERULEAN_CAVE_1F ; new
@@ -313,29 +313,29 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_4
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SPEAROW
-	db 15, RATTATA
-	db 18, EKANS
-	db 20, RATICATE
-	db 20, ARBOK
-	db 20, SANDSHREW
-	db 20, SANDSHREW
+	db 25, SPEAROW
+	db 25, RATTATA
+	db 28, EKANS
+	db 30, RATICATE
+	db 30, ARBOK
+	db 30, SANDSHREW
+	db 30, SANDSLASH
 	; day
-	db 15, SPEAROW
-	db 15, RATTATA
-	db 18, EKANS
-	db 20, RATICATE
-	db 20, ARBOK
-	db 20, SANDSHREW
-	db 20, SANDSHREW
+	db 25, SPEAROW
+	db 25, RATTATA
+	db 28, EKANS
+	db 30, RATICATE
+	db 30, ARBOK
+	db 30, SANDSHREW
+	db 30, SANDSLASH
 	; nite
-	db 15, RATTATA
-	db 20, RATTATA
-	db 20, RATICATE
-	db 16, ZUBAT
-	db 15, RATTATA
-	db 16, CLEFAIRY
-	db 16, CLEFAIRY
+	db 25, RATTATA
+	db 30, RATTATA
+	db 30, RATICATE
+	db 26, ZUBAT
+	db 25, RATTATA
+	db 26, CLEFAIRY
+	db 26, CLEFAIRY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_5
