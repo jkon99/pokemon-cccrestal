@@ -3675,7 +3675,7 @@ BattleCommand_PoisonTarget:
 	ld a, [wTypeModifier]
 	and EFFECTIVENESS_MASK
 	ret z
-	call CheckIfTargetIsPoisonType
+	call CheckIfTargetIsPoisonType ; poison type cant be poison
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -4053,6 +4053,8 @@ BattleCommand_ParalyzeTarget:
 	ret nz
 	ld a, [wTypeModifier]
 	and EFFECTIVENESS_MASK
+	ret z
+	call CheckMoveTypeMatchesTarget ; Don't paralyze an electric type, new
 	ret z
 	call GetOpponentItem
 	ld a, b
