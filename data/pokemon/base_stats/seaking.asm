@@ -1,6 +1,6 @@
 	db SEAKING ; 119
 
-	db  80,  92,  65,  68,  75,  80
+	db  80,  92,  65,  70,  75,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

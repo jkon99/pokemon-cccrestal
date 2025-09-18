@@ -1,6 +1,6 @@
 	db UNOWN ; 201
 
-	db  48,  72,  48,  48,  72,  48
+	db  56,  80,  56,  56,  80,  56
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
