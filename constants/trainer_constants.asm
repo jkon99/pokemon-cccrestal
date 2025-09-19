@@ -530,7 +530,7 @@ DEF KRIS EQU __trainer_class__
 
 	trainerclass FIREBREATHER ; 30
 	const OTIS
-	const DICK ; unused
+	const DICK ; unused, now in blaine gym
 	const NED ; unused
 	const BURT
 	const BILL

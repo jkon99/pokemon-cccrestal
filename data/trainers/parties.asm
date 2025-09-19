@@ -2758,8 +2758,8 @@ FirebreatherGroup:
 	db -1 ; end
 
 	; FIREBREATHER (2)
-	db "DICK@", TRAINERTYPE_NORMAL ; unused, maybe add to blaine gym, turn into charizard and bump 40 levels?
-	;db 17, CHARMELEON
+	db "DICK@", TRAINERTYPE_NORMAL ; unused, add to blaine gym, changed charmeleon lv 17 to charizard lv61
+	db 61, CHARIZARD
 	db -1 ; end
 
 	; FIREBREATHER (3)

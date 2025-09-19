@@ -1,6 +1,7 @@
 	object_const_def
 	const SEAFOAMGYM_BLAINE
 	const SEAFOAMGYM_GYM_GUIDE
+	const SEAFOAMGYM_FIREBREATHER
 
 SeafoamGym_MapScripts:
 	def_scene_scripts
@@ -129,7 +130,7 @@ BlaineIntroText:
 	line "business as a GYM"
 
 	para "LEADER here in"
-	line "this cave."
+	line "seafoam."
 
 	para "If you can beat"
 	line "me, I'll give you"
@@ -158,12 +159,6 @@ BlaineAfterBattleText:
 
 	para "going to win the"
 	line "next time."
-
-	para "When I rebuild my"
-	line "CINNABAR GYM,"
-
-	para "we'll have to have"
-	line "a rematch."
 	done
 
 BlaineFightDoneText:
@@ -206,16 +201,42 @@ SeafoamGymGuideWinText2:
 	line "for a building."
 	done
 
+FirebreatherDick: 
+trainer FIREBREATHER, DICK, EVENT_BEAT_FIREBREATHER_DICK, FirebreatherDickSeenText, FirebreatherDickBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext FirebreatherDickAfterBattleText
+	waitbutton
+	closetext
+	end
+
+FirebreatherDickSeenText:
+	text "BLAAARGH"
+	done
+
+FirebreatherDickBeatenText:
+	text "My flame is"
+	line "burning out..."
+	done
+
+FirebreatherDickAfterBattleText:
+	text "Is it hot in here"
+	line "or what?"
+	done
+
 SeafoamGym_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  5,  5, ROUTE_20, 1
+	warp_event  9,  13, ROUTE_20, 1
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  5,  2, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SeafoamGymBlaineScript, -1
-	object_event  6,  5, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SeafoamGymGuideScript, EVENT_SEAFOAM_GYM_GYM_GUIDE
+	object_event  9,  4, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SeafoamGymBlaineScript, -1
+	object_event 11,  11, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SeafoamGymGuideScript, EVENT_SEAFOAM_GYM_GYM_GUIDE
+	object_event 8, 8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 3, FirebreatherDick, EVENT_BEAT_FIREBREATHER_DICK
