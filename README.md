@@ -13,6 +13,12 @@ It builds the following ROMs:
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
+# Additional credits
+
+New sprites: the_chocobean, shoesbedrawin
+
+Route 47 remix: https://pastebin.com/aSDuVfDW
+
 
 ## See also
 
