@@ -272,6 +272,11 @@ PowerPlantGymGuide2PowerPlantUpAndRunningText:
 
 	para "provide power to"
 	line "the MAGNET TRAIN."
+
+	para "I wonder where"
+	line "that legendary"
+	cont "bird has gone"
+	cont "off to..."
 	done
 
 PowerPlantGymGuide2GeneratorIsRunningAgainText:

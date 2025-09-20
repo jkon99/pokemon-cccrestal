@@ -100,6 +100,10 @@ SwimmermCameronAfterBattleText:
 	text "Besides the sea, I"
 	line "can also swim in"
 	cont "ponds and rivers."
+
+	para "I wonder if I"
+	line "can find that"
+	cont "legendary bird..."
 	done
 
 CinnabarGymSignText:

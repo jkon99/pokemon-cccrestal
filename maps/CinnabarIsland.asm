@@ -1,36 +1,16 @@
-;EXPORT LoadUsedSpritesGFX
-
 	object_const_def
 	const CINNABARISLAND_BLUE
-	;const CINNABARISLAND_MOLTRES
 
 CinnabarIsland_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	;callback MAPCALLBACK_TILES, .ForceSpriteLoad
 	callback MAPCALLBACK_NEWMAP, CinnabarIslandFlypointCallback
-	;callback MAPCALLBACK_OBJECTS, CinnabarIslandMoltresCallback
-/*
-.ForceSpriteLoad: ;try use this to fix sprite load
-    callasm LoadUsedSpritesGFX
-    endcallback
-*/
+
 CinnabarIslandFlypointCallback:
 	setflag ENGINE_FLYPOINT_CINNABAR
 	endcallback
-/*
- CinnabarIslandMoltresCallback:
- 	checkevent EVENT_OPENED_MT_SILVER 
-	iffalse .Hide
-	checkevent EVENT_FOUGHT_MOLTRES
-	iftrue .Hide
-	appear CINNABARISLAND_MOLTRES
-	endcallback
 
-.Hide:
-	disappear CINNABARISLAND_MOLTRES
-	endcallback */
 
 CinnabarIslandBlue:
 	faceplayer
@@ -150,25 +130,7 @@ CinnabarIslandSignText:
 	para "The Fiery Town of"
 	line "Burning Desire"
 	done
-/*
-CinnabarIslandMoltresScript: ; works but spawning in kris sprite instead of bird
-	faceplayer
-	opentext
-	writetext MoltresText
-	cry MOLTRES
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MOLTRES
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MOLTRES, 60
-	startbattle
-	disappear CINNABARISLAND_MOLTRES
-	reloadmapafterbattle
-	end
 
-MoltresText:
-	text "Gyaoo!"
-	done */
 
 CinnabarIsland_MapEvents:
 	db 0, 0 ; filler

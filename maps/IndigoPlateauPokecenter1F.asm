@@ -48,7 +48,9 @@ PlateauRivalBattle1:
 	iftrue PlateauRivalScriptDone
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, PlateauRivalScriptDone
+	ifequal MONDAY, PlateauRivalScriptDone ; appears everyday now
 	ifequal TUESDAY, PlateauRivalScriptDone
+	ifequal WEDNESDAY, PlateauRivalScriptDone ; appears everyday now
 	ifequal THURSDAY, PlateauRivalScriptDone
 	ifequal FRIDAY, PlateauRivalScriptDone
 	ifequal SATURDAY, PlateauRivalScriptDone
@@ -70,7 +72,9 @@ PlateauRivalBattle2:
 	iftrue PlateauRivalScriptDone
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, PlateauRivalScriptDone
+	ifequal MONDAY, PlateauRivalScriptDone ; appears everyday now
 	ifequal TUESDAY, PlateauRivalScriptDone
+	ifequal WEDNESDAY, PlateauRivalScriptDone ; appears everyday now
 	ifequal THURSDAY, PlateauRivalScriptDone
 	ifequal FRIDAY, PlateauRivalScriptDone
 	ifequal SATURDAY, PlateauRivalScriptDone
