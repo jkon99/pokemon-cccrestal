@@ -1052,8 +1052,9 @@ PonytaEvosAttacks:
 	db 8, TAIL_WHIP
 	db 13, EMBER
 	db 19, STOMP
-	db 26, FIRE_SPIN
-	db 34, TAKE_DOWN
+	db 24, DOUBLE_KICK
+	db 29, TAKE_DOWN
+	db 33, FIRE_SPIN
 	db 43, AGILITY
 	db 53, FIRE_BLAST
 	db 0 ; no more level-up moves
@@ -1068,8 +1069,9 @@ RapidashEvosAttacks:
 	db 8, TAIL_WHIP
 	db 13, EMBER
 	db 19, STOMP
-	db 26, FIRE_SPIN
-	db 34, TAKE_DOWN
+	db 24, DOUBLE_KICK
+	db 29, TAKE_DOWN
+	db 36, FIRE_SPIN
 	db 40, MEGAHORN
 	db 47, AGILITY
 	db 61, FIRE_BLAST
