@@ -1782,11 +1782,11 @@ PinsirEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, VICEGRIP
 	db 7, FOCUS_ENERGY
-	db 13, BIND
+	db 13, HARDEN
 	db 19, SEISMIC_TOSS
-	db 25, HARDEN
-	db 31, GUILLOTINE
-	db 37, SUBMISSION
+	db 25, SLASH
+	db 31, SUBMISSION
+	db 37, GUILLOTINE
 	db 43, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
@@ -3135,26 +3135,30 @@ MantineEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, BUBBLE
+	db 1, TWISTER
 	db 10, SUPERSONIC
 	db 18, BUBBLEBEAM
-	db 25, TAKE_DOWN
-	db 32, AGILITY
-	db 40, WING_ATTACK
-	db 49, CONFUSE_RAY
+	db 25, AURORA_BEAM
+	db 32, WING_ATTACK
+	db 40, CONFUSE_RAY
+	db 49, ICE_BEAM
+	db 55, AGILITY
+	db 60, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 SkarmoryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, PECK
-	db 13, SAND_ATTACK
-	db 19, SWIFT
-	db 22, STEEL_WING
-	db 27, AGILITY
-	db 33, DRILL_PECK
-	db 41, SLASH
-	db 47, SPIKES
-	db 54, ROCK_SLIDE
+	db 1, SAND_ATTACK
+	db 10, SWIFT
+	db 18, STEEL_WING
+	db 25, DRILL_PECK
+	db 32, SLASH
+	db 40, SPIKES
+	db 49, ROCK_SLIDE
+	db 55, AGILITY
+	db 60, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 HoundourEvosAttacks:
