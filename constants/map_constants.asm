@@ -154,7 +154,6 @@ ENDM
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 91
-	map_const LEGENDS_CAVE,									15, 14 ; 92 new
 	endgroup
 
 	newgroup ECRUTEAK                                             ;  4
@@ -381,6 +380,7 @@ ENDM
 	map_const SILVER_CAVE_OUTSIDE,                         20, 18 ;  2
 	map_const SILVER_CAVE_POKECENTER_1F,                    5,  4 ;  3
 	map_const ROUTE_28_STEEL_WING_HOUSE,                    4,  4 ;  4
+	map_const LEGENDS_CAVE,									15, 14 ; 5
 	endgroup
 
 	newgroup CABLE_CLUB                                           ; 20
