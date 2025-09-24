@@ -5,57 +5,57 @@ JohtoGrassWildMons:
 	def_grass_wildmons SPROUT_TOWER_2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, BELLSPROUT
-	db 3, RATTATA
-	db 6, GASTLY
 	db 5, RATTATA
+	db 6, RATTATA
 	db 5, BELLSPROUT
+	db 6, RATTATA
+	db 6, GASTLY
+	db 6, RATTATA
+	db 6, BELLSPROUT
 	; day
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, BELLSPROUT
-	db 3, RATTATA
-	db 6, GASTLY
 	db 5, RATTATA
+	db 6, RATTATA
 	db 5, BELLSPROUT
+	db 6, RATTATA
+	db 6, GASTLY
+	db 6, RATTATA
+	db 6, BELLSPROUT
 	; nite
-	db 3, GASTLY
-	db 4, GASTLY
+	db 5, RATTATA
 	db 5, GASTLY
-	db 3, RATTATA
+	db 5, BELLSPROUT
+	db 6, RATTATA
 	db 6, GASTLY
-	db 5, RATTATA
-	db 5, RATTATA
+	db 6, RATTATA
+	db 6, BELLSPROUT
 	end_grass_wildmons
 
 	def_grass_wildmons SPROUT_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, BELLSPROUT
-	db 3, RATTATA
-	db 6, GASTLY
-	db 5, BELLSPROUT
 	db 5, RATTATA
+	db 6, RATTATA
+	db 6, BELLSPROUT
+	db 6, RATTATA
+	db 7, GASTLY
+	db 6, RATTATA
+	db 6, BELLSPROUT
 	; day
-	db 3, RATTATA
-	db 4, RATTATA
-	db 5, BELLSPROUT
-	db 3, RATTATA
-	db 6, GASTLY
-	db 5, BELLSPROUT
 	db 5, RATTATA
+	db 6, RATTATA
+	db 6, BELLSPROUT
+	db 6, RATTATA
+	db 7, GASTLY
+	db 6, RATTATA
+	db 6, BELLSPROUT
 	; nite
-	db 3, GASTLY
-	db 4, GASTLY
 	db 5, GASTLY
-	db 3, RATTATA
 	db 6, GASTLY
-	db 5, BELLSPROUT
-	db 5, RATTATA
+	db 6, BELLSPROUT
+	db 6, RATTATA
+	db 7, GASTLY
+	db 7, GASTLY
+	db 6, BELLSPROUT
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_2F
@@ -512,7 +512,7 @@ JohtoGrassWildMons:
 	db 10, ZUBAT
 	db 10, ZUBAT
 	db 11, ZUBAT
-	db 10, SLOWPOKE
+	db 11, SLOWPOKE
 	db 12, ZUBAT
 	db 11, SLOWPOKE
 	db 12, SLOWPOKE
@@ -520,7 +520,7 @@ JohtoGrassWildMons:
 	db 10, ZUBAT
 	db 10, ZUBAT
 	db 11, ZUBAT
-	db 10, SLOWPOKE
+	db 11, SLOWPOKE
 	db 12, ZUBAT
 	db 11, SLOWPOKE
 	db 12, SLOWPOKE
@@ -528,7 +528,7 @@ JohtoGrassWildMons:
 	db 10, ZUBAT
 	db 10, ZUBAT
 	db 11, ZUBAT
-	db 10, SLOWPOKE
+	db 11, SLOWPOKE
 	db 12, ZUBAT
 	db 11, SLOWPOKE
 	db 12, SLOWPOKE
@@ -1411,7 +1411,7 @@ JohtoGrassWildMons:
 	db 15, ABRA
 	db 16, JIGGLYPUFF
 	db 16, YANMA
-	db 16, YANMA
+	db 17, YANMA
 	; day
 	db 16, SNUBBULL
 	db 16, VULPIX
@@ -1419,7 +1419,7 @@ JohtoGrassWildMons:
 	db 15, ABRA
 	db 16, JIGGLYPUFF
 	db 16, YANMA
-	db 16, YANMA
+	db 17, YANMA
 	; nite
 	db 16, DROWZEE
 	db 16, HOOTHOOT
@@ -1427,35 +1427,35 @@ JohtoGrassWildMons:
 	db 15, ABRA
 	db 16, JIGGLYPUFF
 	db 16, YANMA
-	db 16, YANMA
+	db 17, YANMA
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 6, LEDYBA
-	db 6, PIDGEY
-	db 6, BELLSPROUT
-	db 7, GROWLITHE
-	db 6, PIDGEY
+	db 7, LEDYBA
 	db 7, PIDGEY
+	db 7, BELLSPROUT
+	db 8, GROWLITHE
 	db 7, PIDGEY
+	db 8, PIDGEY
+	db 8, PIDGEY
 	; day
-	db 6, LEDYBA
-	db 6, PIDGEY
-	db 6, BELLSPROUT
-	db 7, GROWLITHE
-	db 6, PIDGEY
+	db 7, LEDYBA
 	db 7, PIDGEY
+	db 7, BELLSPROUT
+	db 8, GROWLITHE
 	db 7, PIDGEY
+	db 8, PIDGEY
+	db 8, PIDGEY
 	; nite
-	db 6, SPINARAK
-	db 6, HOOTHOOT
-	db 6, BELLSPROUT
+	db 7, SPINARAK
 	db 7, HOOTHOOT
+	db 7, BELLSPROUT
 	db 7, HOOTHOOT
-	db 6, GASTLY
+	db 8, HOOTHOOT
 	db 7, GASTLY
+	db 8, GASTLY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_37

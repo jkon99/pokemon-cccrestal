@@ -180,6 +180,7 @@ CaterpieEvosAttacks:
 MetapodEvosAttacks:
 	db EVOLVE_LEVEL, 10, BUTTERFREE
 	db 0 ; no more evolutions
+	db 1, TACKLE
 	db 1, HARDEN
 	db 7, HARDEN
 	db 0 ; no more level-up moves
@@ -209,6 +210,7 @@ KakunaEvosAttacks:
 	db EVOLVE_LEVEL, 10, BEEDRILL
 	db 0 ; no more evolutions
 	db 1, HARDEN
+	db 1, POISON_STING
 	db 7, HARDEN
 	db 0 ; no more level-up moves
 
@@ -844,7 +846,7 @@ PoliwrathEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, SUBMISSION
-	db 35, SUBMISSION
+	db 38, SUBMISSION
 	db 51, MIND_READER
 	db 0 ; no more level-up moves
 
@@ -1002,7 +1004,7 @@ TentacruelEvosAttacks:
 	db 0 ; no more level-up moves
 
 GeodudeEvosAttacks:
-	db EVOLVE_LEVEL, 16, GRAVELER
+	db EVOLVE_LEVEL, 24, GRAVELER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 6, DEFENSE_CURL
@@ -2368,14 +2370,13 @@ SpinarakEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
-	db 6, SCARY_FACE
-	db 11, CONSTRICT
+	db 6, CONSTRICT
+	db 11, SCARY_FACE
 	db 17, NIGHT_SHADE
 	db 23, LEECH_LIFE
-	db 30, FURY_SWIPES
-	db 37, SPIDER_WEB
-	db 45, AGILITY
-	db 53, PSYCHIC_M
+	db 30, SPIDER_WEB
+	db 37, AGILITY
+	db 45, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 AriadosEvosAttacks:
@@ -2384,14 +2385,13 @@ AriadosEvosAttacks:
 	db 1, STRING_SHOT
 	db 1, SCARY_FACE
 	db 1, CONSTRICT
-	db 6, SCARY_FACE
-	db 11, CONSTRICT
+	db 6, CONSTRICT
+	db 11, SCARY_FACE
 	db 17, NIGHT_SHADE
 	db 25, LEECH_LIFE
-	db 34, FURY_SWIPES
-	db 43, SPIDER_WEB
-	db 53, AGILITY
-	db 63, PSYCHIC_M
+	db 34, SPIDER_WEB
+	db 43, AGILITY
+	db 53, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 CrobatEvosAttacks:
@@ -2805,13 +2805,9 @@ SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
-	db 6, GROWL
-	db 15, WATER_GUN
-	db 20, CONFUSION
-	db 29, DISABLE
-	db 34, HEADBUTT
+	db 1, WATER_GUN
+	db 1, CONFUSION
 	db 43, SWAGGER
-	db 48, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:
