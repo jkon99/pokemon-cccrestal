@@ -244,7 +244,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	db STATICMENU_CURSOR ; flags
 	db 4 ; items
 	db "JYNX        500@" ; changed
-	db "PORYGON      500@" ; changed
+	db "PORYGON     500@" ; changed
 	db "WOBBUFFET  500@" ; changed
 	db "CANCEL@"
 

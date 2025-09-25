@@ -593,7 +593,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 16, TYROGUE
+	db 18, TYROGUE
 	db 23, ZUBAT
 	db 23, MACHOP
 	db 23, CUBONE
@@ -601,7 +601,7 @@ JohtoGrassWildMons:
 	db 24, GOLBAT
 	db 24, RATICATE
 	; day
-	db 16, TYROGUE
+	db 18, TYROGUE
 	db 23, ZUBAT
 	db 23, MACHOP
 	db 23, CUBONE
@@ -609,7 +609,7 @@ JohtoGrassWildMons:
 	db 24, GOLBAT
 	db 24, RATICATE
 	; nite
-	db 16, TYROGUE
+	db 18, TYROGUE
 	db 23, ZUBAT
 	db 23, MARILL
 	db 23, CUBONE
@@ -1601,57 +1601,57 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 33, TANGELA
-	db 33, LICKITUNG
-	db 33, WEEPINBELL
-	db 34, WEEPINBELL
+	db 34, TANGELA
 	db 34, LICKITUNG
+	db 34, WEEPINBELL
+	db 35, WEEPINBELL
+	db 35, LICKITUNG
 	db 36, KANGASKHAN
-	db 36, LICKITUNG
+	db 37, LICKITUNG
 	; day
-	db 33, TANGELA
-	db 33, LICKITUNG
-	db 33, WEEPINBELL
-	db 34, WEEPINBELL
+	db 34, TANGELA
 	db 34, LICKITUNG
-	db 36, KANGASKHAN
-	db 36, LICKITUNG
-	; nite
-	db 33, TANGELA
-	db 32, HAUNTER
-	db 33, WEEPINBELL
 	db 34, WEEPINBELL
-	db 34, POLIWHIRL
+	db 35, WEEPINBELL
+	db 35, LICKITUNG
+	db 36, KANGASKHAN
+	db 37, LICKITUNG
+	; nite
+	db 35, TANGELA
+	db 35, HAUNTER
+	db 35, WEEPINBELL
+	db 36, WEEPINBELL
+	db 35, POLIWHIRL
 	db 36, POLIWHIRL
-	db 36, POLIWHIRL
+	db 37, POLIWHIRL
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_45
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, GRAVELER
-	db 37, GRAVELER
-	db 36, GLIGAR
 	db 36, DONPHAN
-	db 35, DONPHAN
+	db 37, GLIGAR
+	db 37, GRAVELER
+	db 37, DONPHAN
 	db 37, SKARMORY
-	db 37, SKARMORY
+	db 38, SKARMORY
 	; day
 	db 36, GRAVELER
-	db 37, GRAVELER
-	db 36, GLIGAR
 	db 36, DONPHAN
-	db 35, DONPHAN
+	db 37, GLIGAR
+	db 37, GRAVELER
+	db 37, DONPHAN
 	db 37, SKARMORY
-	db 37, SKARMORY
+	db 38, SKARMORY
 	; nite
 	db 36, GRAVELER
+	db 37, DONPHAN
+	db 37, GLIGAR
 	db 37, GRAVELER
-	db 36, GLIGAR
 	db 36, DONPHAN
-	db 35, DONPHAN
 	db 37, SKARMORY
-	db 37, SKARMORY
+	db 38, SKARMORY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_46

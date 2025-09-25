@@ -1793,10 +1793,11 @@ PinsirEvosAttacks:
 	db 7, FOCUS_ENERGY
 	db 13, HARDEN
 	db 19, SEISMIC_TOSS
-	db 25, SLASH
-	db 31, SUBMISSION
-	db 37, GUILLOTINE
+	db 25, KARATE_CHOP
+	db 31, SLASH
+	db 37, SUBMISSION
 	db 43, SWORDS_DANCE
+	db 55, GUILLOTINE
 	db 0 ; no more level-up moves
 
 TaurosEvosAttacks:
