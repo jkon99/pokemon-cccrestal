@@ -1010,9 +1010,9 @@ GeodudeEvosAttacks:
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
 	db 16, MAGNITUDE
-	db 21, SELFDESTRUCT
-	db 26, HARDEN
-	db 31, ROLLOUT
+	db 21, ROLLOUT
+	db 26, SELFDESTRUCT
+	db 31, ROCK_SLIDE
 	db 36, EARTHQUAKE
 	db 41, EXPLOSION
 	db 0 ; no more level-up moves
@@ -1026,9 +1026,9 @@ GravelerEvosAttacks:
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
 	db 16, MAGNITUDE
-	db 21, SELFDESTRUCT
-	db 27, HARDEN
-	db 34, ROLLOUT
+	db 21, ROLLOUT
+	db 27, SELFDESTRUCT
+	db 34, ROCK_SLIDE
 	db 41, EARTHQUAKE
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
@@ -1042,9 +1042,9 @@ GolemEvosAttacks:
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
 	db 16, MAGNITUDE
-	db 21, SELFDESTRUCT
-	db 27, HARDEN
-	db 34, ROLLOUT
+	db 21, ROLLOUT
+	db 27, SELFDESTRUCT
+	db 34, ROCK_SLIDE
 	db 41, EARTHQUAKE
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
@@ -1150,9 +1150,10 @@ FarfetchDEvosAttacks:
 	db 13, LEER
 	db 19, FURY_ATTACK
 	db 25, SWORDS_DANCE
-	db 31, AGILITY
-	db 37, SLASH
-	db 44, FALSE_SWIPE
+	db 30, WING_ATTACK
+	db 34, SLASH
+	db 40, AGILITY
+	db 47, FALSE_SWIPE
 	db 0 ; no more level-up moves
 
 DoduoEvosAttacks:
@@ -1179,7 +1180,7 @@ DodrioEvosAttacks:
 	db 20, DOUBLE_KICK
 	db 25, RAGE
 	db 31, TRI_ATTACK
-	db 38, DRILL_PECK
+	db 37, DRILL_PECK
 	db 45, AGILITY
 	db 0 ; no more level-up moves
 
@@ -1623,12 +1624,12 @@ KangaskhanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COMET_PUNCH
 	db 7, LEER
-	db 13, BITE
-	db 19, TAIL_WHIP
-	db 25, MEGA_PUNCH
-	db 31, RAGE
-	db 37, ENDURE
-	db 43, DIZZY_PUNCH
+	db 13, TAIL_WHIP
+	db 19, RAGE
+	db 25, BITE
+	db 31, MEGA_PUNCH
+	db 37, DIZZY_PUNCH
+	db 43, ENDURE
 	db 49, REVERSAL
 	db 0 ; no more level-up moves
 
@@ -3267,7 +3268,8 @@ StantlerEvosAttacks:
 	db 1, TACKLE
 	db 8, LEER
 	db 15, HYPNOSIS
-	db 23, STOMP
+	db 20, BITE
+	db 24, STOMP
 	db 31, SAND_ATTACK
 	db 40, TAKE_DOWN
 	db 49, CONFUSE_RAY

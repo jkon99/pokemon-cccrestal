@@ -706,27 +706,27 @@ KantoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 50, TANGELA
-	db 55, RATICATE
-	db 55, TANGELA
-	db 50, VAPOREON
-	db 50, MR__MIME
-	db 53, MR__MIME
+	db 53, RATICATE
+	db 53, TANGELA
+	db 51, VAPOREON
+	db 51, HITMONLEE
+	db 52, MR__MIME
 	db 55, MR__MIME
 	; day
 	db 50, TANGELA
-	db 55, RATICATE
-	db 55, TANGELA
+	db 53, RATICATE
+	db 53, TANGELA
 	db 50, VAPOREON
-	db 50, MR__MIME
-	db 53, MR__MIME
+	db 50, HITMONCHAN
+	db 52, MR__MIME
 	db 55, MR__MIME
 	; nite
 	db 50, TANGELA
-	db 55, RATICATE
-	db 55, TANGELA
-	db 50, VAPOREON
-	db 50, MR__MIME
-	db 53, MR__MIME
+	db 53, RATICATE
+	db 53, TANGELA
+	db 51, VAPOREON
+	db 51, HITMONTOP
+	db 52, MR__MIME
 	db 55, MR__MIME
 	end_grass_wildmons
 

@@ -285,52 +285,52 @@ JohtoGrassWildMons:
 	def_grass_wildmons BURNED_TOWER_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 18, RATTATA
-	db 19, KOFFING
-	db 19, SLUGMA
-	db 18, ZUBAT
-	db 20, MISDREAVUS
-	db 20, MAGMAR
-	db 20, RATICATE
+	db 19, RATTATA
+	db 20, KOFFING
+	db 20, GASTLY
+	db 19, ZUBAT
+	db 21, MISDREAVUS
+	db 21, MAGMAR
+	db 21, RATICATE
 	; day
-	db 18, RATTATA
-	db 19, KOFFING
-	db 19, SLUGMA
-	db 18, ZUBAT
-	db 20, MISDREAVUS
-	db 20, MAGMAR
-	db 20, RATICATE
+	db 19, RATTATA
+	db 20, KOFFING
+	db 20, GASTLY
+	db 19, ZUBAT
+	db 21, MISDREAVUS
+	db 21, MAGMAR
+	db 21, RATICATE
 	; nite
-	db 18, RATTATA
-	db 19, KOFFING
-	db 19, SLUGMA
-	db 18, ZUBAT
-	db 20, MISDREAVUS
-	db 20, MAGMAR
-	db 20, RATICATE
+	db 19, RATTATA
+	db 20, KOFFING
+	db 20, GASTLY
+	db 19, ZUBAT
+	db 21, MISDREAVUS
+	db 21, MAGMAR
+	db 21, RATICATE
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 21, RATTATA
-	db 21, KOFFING
-	db 21, KOFFING
+	db 21, GASTLY
+	db 21, SLUGMA
 	db 21, ZUBAT
 	db 21, KOFFING
 	db 22, KOFFING
 	db 23, WEEZING
 	; day
 	db 21, RATTATA
-	db 21, KOFFING
-	db 21, KOFFING
+	db 21, GASTLY
+	db 21, SLUGMA
 	db 21, ZUBAT
 	db 21, KOFFING
 	db 22, KOFFING
 	db 23, WEEZING
 	; nite
 	db 21, RATTATA
-	db 21, KOFFING
+	db 21, GASTLY
 	db 21, KOFFING
 	db 21, ZUBAT
 	db 21, KOFFING
@@ -1462,28 +1462,28 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 17, LEDYBA
-	db 17, GROWLITHE
-	db 17, PIDGEY
-	db 17, GROWLITHE
-	db 18, PIDGEOTTO
-	db 18, LEDIAN
-	db 18, LEDIAN
+	db 18, GROWLITHE
+	db 18, PIDGEY
+	db 18, GROWLITHE
+	db 19, PIDGEOTTO
+	db 19, LEDIAN
+	db 19, LEDIAN
 	; day
 	db 17, LEDYBA
-	db 17, GROWLITHE
-	db 17, PIDGEY
-	db 17, GROWLITHE
-	db 18, PIDGEOTTO
-	db 18, LEDIAN
-	db 18, LEDIAN
+	db 18, GROWLITHE
+	db 18, PIDGEY
+	db 18, GROWLITHE
+	db 19, PIDGEOTTO
+	db 19, LEDIAN
+	db 19, LEDIAN
 	; nite
 	db 17, SPINARAK
-	db 17, STANTLER
-	db 17, HOOTHOOT
 	db 18, STANTLER
-	db 18, NOCTOWL
-	db 18, ARIADOS
-	db 18, ARIADOS
+	db 18, HOOTHOOT
+	db 19, STANTLER
+	db 19, NOCTOWL
+	db 19, ARIADOS
+	db 19, ARIADOS
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_38
@@ -1509,8 +1509,8 @@ JohtoGrassWildMons:
 	db 22, RATICATE
 	db 22, MAGNEMITE
 	db 22, NOCTOWL
-	db 22, MEOWTH
-	db 23, MEOWTH
+	db 22, GASTLY
+	db 23, GASTLY
 	db 23, MEOWTH
 	end_grass_wildmons
 
@@ -1537,8 +1537,8 @@ JohtoGrassWildMons:
 	db 22, RATICATE
 	db 22, MAGNEMITE
 	db 22, NOCTOWL
-	db 22, MEOWTH
-	db 22, MEOWTH
+	db 22, GASTLY
+	db 23, GASTLY
 	db 22, MEOWTH
 	end_grass_wildmons
 
@@ -1618,7 +1618,7 @@ JohtoGrassWildMons:
 	db 36, LICKITUNG
 	; nite
 	db 33, TANGELA
-	db 32, POLIWAG
+	db 32, HAUNTER
 	db 33, WEEPINBELL
 	db 34, WEEPINBELL
 	db 34, POLIWHIRL
@@ -1797,27 +1797,27 @@ JohtoGrassWildMons:
 	def_grass_wildmons OLIVINE_CITY ; new for encounters
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 21, PIDGEY
-	db 21, PIKACHU
-	db 21, MAGNEMITE
+	db 22, PIDGEY
+	db 22, PIKACHU
+	db 22, MAGNEMITE
 	db 22, FLAAFFY
 	db 24, PIDGEOTTO
 	db 23, ELECTABUZZ
 	db 24, ELECTABUZZ
 	; day
-	db 21, PIDGEY
-	db 21, PIKACHU
-	db 21, MAGNEMITE
+	db 22, PIDGEY
+	db 22, PIKACHU
+	db 22, MAGNEMITE
 	db 22, FLAAFFY
-	db 24, PIDGEOTTO
+	db 23, PIDGEOTTO
 	db 23, ELECTABUZZ
-	db 23, ELECTABUZZ
+	db 24, ELECTABUZZ
 	; nite
-	db 21, ZUBAT
-	db 21, PIKACHU
-	db 21, MAGNEMITE
+	db 22, ZUBAT
+	db 22, PIKACHU
+	db 22, MAGNEMITE
 	db 22, FLAAFFY
-	db 24, MURKROW
+	db 23, MURKROW
 	db 23, ELECTABUZZ
 	db 24, ELECTABUZZ
 	end_grass_wildmons
