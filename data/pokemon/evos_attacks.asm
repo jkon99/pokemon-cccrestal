@@ -1029,7 +1029,7 @@ GravelerEvosAttacks:
 	db 21, ROLLOUT
 	db 27, SELFDESTRUCT
 	db 34, ROCK_SLIDE
-	db 41, EARTHQUAKE
+	db 42, EARTHQUAKE
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 
@@ -1045,8 +1045,8 @@ GolemEvosAttacks:
 	db 21, ROLLOUT
 	db 27, SELFDESTRUCT
 	db 34, ROCK_SLIDE
-	db 41, EARTHQUAKE
-	db 48, EXPLOSION
+	db 44, EARTHQUAKE
+	db 50, EXPLOSION
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
@@ -2230,7 +2230,7 @@ TyphlosionEvosAttacks:
 	db 27, DIG
 	db 32, SWIFT
 	db 41, FLAMETHROWER
-	db 46, EARTHQUAKE
+	db 47, EARTHQUAKE
 	db 55, FIRE_BLAST
 	db 0 ; no more level-up moves
 
@@ -2242,8 +2242,8 @@ TotodileEvosAttacks:
 	db 8, WATER_GUN
 	db 12, RAGE
 	db 20, BITE
-	db 27, SCARY_FACE
-	db 35, SLASH
+	db 27, SLASH
+	db 35, SCARY_FACE
 	db 43, SCREECH
 	db 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2257,8 +2257,8 @@ CroconawEvosAttacks:
 	db 8, WATER_GUN
 	db 12, RAGE
 	db 21, BITE
-	db 28, SCARY_FACE
-	db 37, SLASH
+	db 28, SLASH
+	db 37, SCARY_FACE
 	db 45, SCREECH
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2272,8 +2272,8 @@ FeraligatrEvosAttacks:
 	db 8, WATER_GUN
 	db 12, RAGE
 	db 21, BITE
-	db 28, SCARY_FACE
-	db 37, SLASH
+	db 28, SLASH
+	db 37, SCARY_FACE
 	db 43, CRUNCH
 	db 47, SCREECH
 	db 58, HYDRO_PUMP
@@ -3427,10 +3427,10 @@ LarvitarEvosAttacks:
 	db 8, ROCK_SLIDE
 	db 15, SCREECH
 	db 22, DIG
-	db 29, THRASH
-	db 36, CRUNCH
-	db 43, SANDSTORM
-	db 50, EARTHQUAKE
+	db 27, THRASH
+	db 34, CRUNCH
+	db 41, SANDSTORM
+	db 46, EARTHQUAKE
 	db 57, HYPER_BEAM
 	db 65, SCARY_FACE
 	db 0 ; no more level-up moves
@@ -3449,8 +3449,8 @@ PupitarEvosAttacks:
 	db 36, CRUNCH
 	db 43, SANDSTORM
 	db 48, EARTHQUAKE
-	db 57, HYPER_BEAM
-	db 65, SCARY_FACE
+	db 55, HYPER_BEAM
+	db 60, SCARY_FACE
 	db 0 ; no more level-up moves
 
 TyranitarEvosAttacks:
