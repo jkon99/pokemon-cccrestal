@@ -1069,29 +1069,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ROOM_1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 53, GRAVELER
-	db 54, URSARING
-	db 52, STEELIX
-	db 55, MAGMAR
-	db 55, GOLBAT
-	db 40, LARVITAR
+	db 58, GRAVELER
+	db 59, URSARING
+	db 57, STEELIX
+	db 60, MAGMAR
+	db 60, GOLBAT
 	db 45, LARVITAR
+	db 50, LARVITAR
 	; day
-	db 53, GRAVELER
-	db 54, URSARING
-	db 52, STEELIX
-	db 55, MAGMAR
-	db 55, GOLBAT
-	db 40, LARVITAR
+	db 58, GRAVELER
+	db 59, URSARING
+	db 57, STEELIX
+	db 60, MAGMAR
+	db 60, GOLBAT
 	db 45, LARVITAR
+	db 50, LARVITAR
 	; nite
-	db 53, GRAVELER
-	db 54, GOLBAT
-	db 52, STEELIX
-	db 52, GOLBAT
-	db 55, GOLDUCK
-	db 56, GOLBAT
-	db 56, GOLBAT
+	db 58, GRAVELER
+	db 59, URSARING
+	db 57, STEELIX
+	db 60, MAGMAR
+	db 60, GOLBAT
+	db 45, LARVITAR
+	db 50, LARVITAR
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
@@ -1102,16 +1102,16 @@ JohtoGrassWildMons:
 	db 57, URSARING
 	db 56, PARASECT
 	db 58, PARASECT
-	db 45, LARVITAR
-	db 40, LARVITAR
+	db 50, LARVITAR
+	db 44, LARVITAR
 	; day
 	db 58, GOLBAT
 	db 58, MACHOKE
 	db 57, URSARING
 	db 56, PARASECT
 	db 58, PARASECT
-	db 45, LARVITAR
-	db 40, LARVITAR
+	db 50, LARVITAR
+	db 44, LARVITAR
 	; nite
 	db 58, GOLBAT
 	db 58, GOLDUCK
@@ -1125,56 +1125,56 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ROOM_3
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 51, GOLBAT
-	db 48, ONIX
-	db 48, GRAVELER
-	db 50, URSARING
-	db 40, LARVITAR
+	db 58, GRAVELER
+	db 59, URSARING
+	db 57, STEELIX
+	db 60, MAGMAR
+	db 60, GOLBAT
 	db 45, LARVITAR
-	db 40, PUPITAR
+	db 50, PUPITAR
 	; day
-	db 51, GOLBAT
-	db 48, ONIX
-	db 48, GRAVELER
-	db 50, URSARING
-	db 40, LARVITAR
+	db 58, GRAVELER
+	db 59, URSARING
+	db 57, STEELIX
+	db 60, MAGMAR
+	db 60, GOLBAT
 	db 45, LARVITAR
-	db 40, PUPITAR
+	db 50, PUPITAR
 	; nite
 	db 51, GOLBAT
-	db 48, ONIX
-	db 48, GRAVELER
-	db 49, GOLBAT
-	db 45, GOLDUCK
+	db 58, ONIX
+	db 58, GRAVELER
+	db 59, GOLBAT
+	db 55, GOLDUCK
 	db 53, GOLBAT
-	db 53, GOLBAT
+	db 53, CROBAT
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ITEM_ROOMS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 48, CROBAT
-	db 46, CROBAT
-	db 50, CROBAT
-	db 46, PARASECT
-	db 48, PARASECT
-	db 50, PARASECT
+	db 56, PARASECT
+	db 58, PARASECT
+	db 55, PARASECT
+	db 58, CROBAT
+	db 56, CROBAT
+	db 55, CROBAT
 	db 52, PARASECT
 	; day
-	db 48, CROBAT
-	db 46, CROBAT
-	db 50, CROBAT
-	db 46, PARASECT
-	db 48, PARASECT
+	db 56, PARASECT
+	db 58, PARASECT
 	db 50, PARASECT
+	db 58, CROBAT
+	db 56, CROBAT
+	db 50, CROBAT
 	db 52, PARASECT
 	; nite
-	db 45, MISDREAVUS
-	db 48, CROBAT
-	db 50, CROBAT
-	db 46, PARASECT
-	db 48, PARASECT
+	db 56, MISDREAVUS
+	db 58, PARASECT
 	db 50, PARASECT
+	db 58, CROBAT
+	db 56, CROBAT
+	db 50, CROBAT
 	db 52, PARASECT
 	end_grass_wildmons
 
@@ -1185,7 +1185,7 @@ JohtoGrassWildMons:
 	db 5, ZUBAT
 	db 4, GEODUDE
 	db 6, GEODUDE
-	db 4, TEDDIURSA
+	db 5, TEDDIURSA
 	db 6, ZUBAT
 	db 6, DUNSPARCE
 	; day
@@ -1193,7 +1193,7 @@ JohtoGrassWildMons:
 	db 5, ZUBAT
 	db 4, GEODUDE
 	db 6, GEODUDE
-	db 4, ZUBAT
+	db 5, TEDDIURSA
 	db 6, ZUBAT
 	db 6, DUNSPARCE
 	; nite
@@ -1201,7 +1201,7 @@ JohtoGrassWildMons:
 	db 5, ZUBAT
 	db 4, GEODUDE
 	db 6, GEODUDE
-	db 4, ZUBAT
+	db 5, TEDDIURSA
 	db 6, ZUBAT
 	db 6, DUNSPARCE
 	end_grass_wildmons
@@ -1769,29 +1769,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 41, BAYLEEF
-	db 41, CROCONAW
-	db 41, QUILAVA
-	db 41, QUILAVA
-	db 44, RAPIDASH
-	db 43, DODRIO
-	db 43, DODRIO
+	db 51, BAYLEEF
+	db 51, CROCONAW
+	db 51, QUILAVA
+	db 51, QUILAVA
+	db 54, RAPIDASH
+	db 53, DODRIO
+	db 53, DODRIO
 	; day
-	db 41, BAYLEEF
-	db 41, CROCONAW
-	db 41, QUILAVA
-	db 41, QUILAVA
-	db 44, RAPIDASH
-	db 43, DODRIO
-	db 43, DODRIO
+	db 51, BAYLEEF
+	db 51, CROCONAW
+	db 51, QUILAVA
+	db 51, QUILAVA
+	db 54, RAPIDASH
+	db 53, DODRIO
+	db 53, DODRIO
 	; nite
-	db 41, BAYLEEF
-	db 41, CROCONAW
-	db 41, QUILAVA
-	db 41, QUILAVA
-	db 40, GOLBAT
-	db 44, GOLBAT
-	db 44, GOLBAT
+	db 51, BAYLEEF
+	db 51, CROCONAW
+	db 51, QUILAVA
+	db 51, QUILAVA
+	db 50, GOLBAT
+	db 54, GOLBAT
+	db 54, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons OLIVINE_CITY ; new for encounters
