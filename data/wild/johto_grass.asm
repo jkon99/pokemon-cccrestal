@@ -1074,24 +1074,24 @@ JohtoGrassWildMons:
 	db 57, STEELIX
 	db 60, MAGMAR
 	db 60, GOLBAT
-	db 45, LARVITAR
 	db 50, LARVITAR
+	db 55, PUPITAR
 	; day
 	db 58, GRAVELER
 	db 59, URSARING
 	db 57, STEELIX
 	db 60, MAGMAR
 	db 60, GOLBAT
-	db 45, LARVITAR
 	db 50, LARVITAR
+	db 55, PUPITAR
 	; nite
 	db 58, GRAVELER
 	db 59, URSARING
 	db 57, STEELIX
 	db 60, MAGMAR
 	db 60, GOLBAT
-	db 45, LARVITAR
 	db 50, LARVITAR
+	db 55, PUPITAR
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_ROOM_2
@@ -1103,7 +1103,7 @@ JohtoGrassWildMons:
 	db 56, PARASECT
 	db 58, PARASECT
 	db 50, LARVITAR
-	db 44, LARVITAR
+	db 55, PUPITAR
 	; day
 	db 58, GOLBAT
 	db 58, MACHOKE
@@ -1111,7 +1111,7 @@ JohtoGrassWildMons:
 	db 56, PARASECT
 	db 58, PARASECT
 	db 50, LARVITAR
-	db 44, LARVITAR
+	db 55, PUPITAR
 	; nite
 	db 58, GOLBAT
 	db 58, GOLDUCK
@@ -1130,16 +1130,16 @@ JohtoGrassWildMons:
 	db 57, STEELIX
 	db 60, MAGMAR
 	db 60, GOLBAT
-	db 45, LARVITAR
-	db 50, PUPITAR
+	db 50, LARVITAR
+	db 55, PUPITAR
 	; day
 	db 58, GRAVELER
 	db 59, URSARING
 	db 57, STEELIX
 	db 60, MAGMAR
 	db 60, GOLBAT
-	db 45, LARVITAR
-	db 50, PUPITAR
+	db 50, LARVITAR
+	db 55, PUPITAR
 	; nite
 	db 51, GOLBAT
 	db 58, ONIX

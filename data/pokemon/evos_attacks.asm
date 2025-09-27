@@ -2088,8 +2088,8 @@ DragonairEvosAttacks:
 
 DragoniteEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WRAP
 	db 1, LEER
+	db 1, WING_ATTACK
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
