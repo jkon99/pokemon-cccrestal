@@ -680,26 +680,26 @@ KantoGrassWildMons:
 	db 52, PERSIAN
 	db 52, FEAROW
 	db 52, YANMA
-	db 52, FEAROW
-	db 52, FLAREON
 	db 52, MUK
+	db 52, FLAREON
 	db 52, DRAGONAIR
+	db 52, FEAROW
 	; day
 	db 52, PERSIAN
 	db 52, FEAROW
 	db 52, YANMA
-	db 52, FEAROW
-	db 52, FLAREON
 	db 52, MUK
+	db 52, FLAREON
 	db 52, DRAGONAIR
+	db 52, FEAROW
 	; nite
 	db 52, PERSIAN
 	db 52, MURKROW
-	db 52, YANMA
 	db 52, NOCTOWL
-	db 52, FLAREON
 	db 52, MUK
+	db 52, FLAREON
 	db 52, DRAGONAIR
+	db 52, MURKROW
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_21

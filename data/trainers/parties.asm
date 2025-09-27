@@ -1352,7 +1352,7 @@ BeautyGroup:
 	db -1 ; end 
 
 	; BEAUTY (14)
-	db "JULIA@", TRAINERTYPE_NORMAL  ; having a lot of issues loading properly in erika gym
+	db "JULIA@", TRAINERTYPE_NORMAL  
 	db 54, VILEPLUME
 	db 54, EXEGGUTOR
 	db 54, PARASECT
@@ -1660,8 +1660,8 @@ GentlemanGroup:
 
 	; GENTLEMAN (3)
 	db "GREGORY@", TRAINERTYPE_NORMAL
-	db 53, RAICHU
-	db 53, AMPHAROS
+	db 54, RAICHU
+	db 54, AMPHAROS
 	db -1 ; end
 
 	; GENTLEMAN (4)
@@ -2307,9 +2307,9 @@ SailorGroup:
 
 	; SAILOR (9)
 	db "STANLY@", TRAINERTYPE_NORMAL
-	db 51, MACHOKE
-	db 53, MACHAMP
-	db 46, GOLDUCK
+	db 52, MACHOKE
+	db 54, MACHAMP
+	db 53, GOLDUCK
 	db -1 ; end
 
 	; SAILOR (10)
@@ -2496,9 +2496,9 @@ GuitaristGroup:
 
 	; GUITARIST (2)
 	db "VINCENT@", TRAINERTYPE_NORMAL
-	db 47, MAGNETON
+	db 53, MAGNETON
 	db 53, ELECTRODE
-	db 52, MAGNETON
+	db 53, MAGNETON
 	db -1 ; end
 
 HikerGroup:
