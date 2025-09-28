@@ -137,7 +137,7 @@ CinnabarIsland_MapEvents:
 
 	def_warp_events
 	warp_event 11, 11, CINNABAR_POKECENTER_1F, 1
-	warp_event 8 , 5, LEGENDS_CAVE, 3
+	warp_event 8 , 5, LEGENDS_CAVE, 2
 
 	def_coord_events
 

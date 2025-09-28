@@ -1,5 +1,5 @@
 	object_const_def
-	const LEGENDS_MEW
+	;const LEGENDS_MEW
 	const LEGENDS_ZAPDOS
 	const LEGENDS_MOLTRES
 	const ICEPATH1F_ARTICUNO
@@ -9,7 +9,7 @@ LegendsCave_MapScripts: ; for some reason entering map it loads as "cerulean cav
 
 	def_callbacks
 	;callback MAPCALLBACK_TILES, .ForceSpriteLoad
-	callback MAPCALLBACK_OBJECTS, LegendsCaveMewCallback
+	;callback MAPCALLBACK_OBJECTS, LegendsCaveMewCallback
 	callback MAPCALLBACK_OBJECTS, LegendsCaveZapdosCallback
 	callback MAPCALLBACK_OBJECTS, LegendsCaveMoltresCallback
 	callback MAPCALLBACK_OBJECTS, IcePathArticunoCallback
@@ -29,7 +29,7 @@ IcePathArticunoCallback:
 .Hide:
 	disappear ICEPATH1F_ARTICUNO
 	endcallback
-
+/*
 LegendsCaveMewCallback:
 	checkevent EVENT_OPENED_MT_SILVER 
 	iffalse .Hide
@@ -42,7 +42,7 @@ LegendsCaveMewCallback:
 .Hide:
 	disappear LEGENDS_MEW
 	endcallback
-
+*/
 LegendsCaveZapdosCallback:
 	checkevent EVENT_OPENED_MT_SILVER 
 	iffalse .Hide
@@ -85,7 +85,7 @@ IcePathArticunoScript: ; works tested for now
 ArticunoText:
 	text "Gyaoo!"
 	done
-
+/*
 LegendsMewScript: 
 	faceplayer
 	opentext
@@ -104,7 +104,7 @@ LegendsMewScript:
 MewText:
 	text "Mew!"
 	done
-
+*/
 LegendsZapdosScript: 
 	faceplayer
 	opentext
@@ -147,7 +147,7 @@ MoltresText:
 LegendsCave_MapEvents:
 	db 0, 0 ; filler
 	def_warp_events ; fixed
-	warp_event 7,  9, ROUTE_47, 2
+	;warp_event 7,  9, ROUTE_47, 2
 	warp_event  21,  9, ROUTE_10_NORTH, 3
 	warp_event  7,  21, CINNABAR_ISLAND, 2
 	warp_event  21, 21, ROUTE_20, 2
@@ -158,7 +158,7 @@ LegendsCave_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  7, 5, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LegendsMewScript, EVENT_FOUGHT_MEW
-	object_event 21, 5, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LegendsZapdosScript, EVENT_FOUGHT_ZAPDOS
-	object_event 7, 17, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LegendsMoltresScript, EVENT_FOUGHT_MOLTRES
-	object_event 21, 17, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IcePathArticunoScript, EVENT_FOUGHT_ARTICUNO  ; should event be based on pokemon or mt silver? experiment
+	;object_event  6, 5, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LegendsMewScript, EVENT_FOUGHT_MEW  ;EVENT_FOUGHT_MEW
+	object_event 21, 5, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LegendsZapdosScript, EVENT_FOUGHT_ZAPDOS ;EVENT_FOUGHT_ZAPDOS
+	object_event 7, 17, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LegendsMoltresScript, EVENT_FOUGHT_MOLTRES  ;EVENT_FOUGHT_MOLTRES
+	object_event 21, 17, SPRITE_BIRD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IcePathArticunoScript, EVENT_FOUGHT_ARTICUNO  ;EVENT_FOUGHT_ARTICUNO  ; should event be based on pokemon or mt silver? experiment

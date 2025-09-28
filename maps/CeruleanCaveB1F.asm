@@ -1,13 +1,11 @@
 	object_const_def
 	const CERULEANCAVEB1F_MEWTWO
 
-	; make water have collision
-
 CeruleanCaveB1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, CeruleanCaveB1FMewtwoCallback
+/*	callback MAPCALLBACK_OBJECTS, CeruleanCaveB1FMewtwoCallback
 
 CeruleanCaveB1FMewtwoCallback:
 	checkevent EVENT_FOUGHT_MEWTWO
@@ -16,13 +14,12 @@ CeruleanCaveB1FMewtwoCallback:
 
 .NoAppear:
 	disappear CERULEANCAVEB1F_MEWTWO
-	endcallback
+	endcallback */
 
 CeruleanCaveB1FMewtwoScript:
 	faceplayer
 	opentext
 	writetext MewtwoText
-	; play mewtwo sound, and initiate battle
 	cry MEWTWO
 	pause 15
 	closetext

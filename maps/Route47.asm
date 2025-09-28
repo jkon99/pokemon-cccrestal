@@ -76,7 +76,7 @@ Route47_MapEvents:
 
 	def_warp_events
 	warp_event 53, 7, CIANWOOD_CAVE, 2
-	warp_event 7, 7, LEGENDS_CAVE, 1
+	;warp_event 7, 7, LEGENDS_CAVE, 1
 
 	def_coord_events
 

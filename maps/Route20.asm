@@ -119,7 +119,7 @@ Route20_MapEvents:
 
 	def_warp_events
 	warp_event 38,  7, SEAFOAM_GYM, 1
-	warp_event 30, 5, LEGENDS_CAVE, 4
+	warp_event 30, 5, LEGENDS_CAVE, 3
 
 	def_coord_events
 

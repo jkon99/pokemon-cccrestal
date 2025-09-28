@@ -1,16 +1,46 @@
 	object_const_def
+	const CERULEANCAVE1F_MEW
 
 CeruleanCave1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
+/*	callback MAPCALLBACK_OBJECTS, CeruleanCave1FMewCallback
+
+CeruleanCave1FMewCallback:
+	checkevent EVENT_FOUGHT_MEW
+	iftrue .NoAppear
+	appear CERULEANCAVE1F_MEW
+
+.NoAppear:
+	disappear CERULEANCAVE1F_MEW
+	endcallback */
+
+CeruleanCave1FMewScript: 
+	faceplayer
+	opentext
+	writetext MewText
+	cry MEW
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_MEW
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon MEW, 70
+	startbattle
+	disappear CERULEANCAVE1F_MEW
+	reloadmapafterbattle
+	end
+
+MewText:
+	text "Mew!"
+	done
 
 
 CeruleanCave1F_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  5, 5, CERULEAN_CAVE_B1F, 1   ; fix collision on entrance, and make map brighter
+	warp_event  5, 5, CERULEAN_CAVE_B1F, 1   
 	warp_event  27, 15, CERULEAN_CITY, 7
 
 	def_coord_events
@@ -19,5 +49,6 @@ CeruleanCave1F_MapEvents:
 	
 
 	def_object_events
+	object_event  5, 10, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCave1FMewScript, EVENT_FOUGHT_MEW 
 	
 	
