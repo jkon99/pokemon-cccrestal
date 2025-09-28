@@ -49,6 +49,6 @@ CeruleanCave1F_MapEvents:
 	
 
 	def_object_events
-	object_event  5, 10, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCave1FMewScript, EVENT_FOUGHT_MEW 
+	object_event  5, 10, SPRITE_FAIRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCave1FMewScript, EVENT_FOUGHT_MEW ; wont spawn but mewtwo does
 	
 	

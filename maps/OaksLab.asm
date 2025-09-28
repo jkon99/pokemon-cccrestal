@@ -41,6 +41,7 @@ Oak:
 	writetext OakOpenMtSilverText
 	promptbutton
 	setevent EVENT_OPENED_MT_SILVER
+	clearevent EVENT_FOUGHT_MEW ; to fix mew spawn
 	sjump .CheckPokedex
 
 .Complain:

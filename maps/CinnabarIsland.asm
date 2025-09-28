@@ -26,6 +26,7 @@ CinnabarIslandBlue:
 
 CinnabarIslandGymSign:
 	;setevent EVENT_OPENED_MT_SILVER ;test
+	;clearevent EVENT_FOUGHT_MEW
 	jumptext CinnabarIslandGymSignText
 
 CinnabarIslandSign:
