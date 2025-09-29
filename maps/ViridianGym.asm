@@ -178,7 +178,7 @@ LeaderBluePsychUpText:
 	text "Also, take this"
 	line "good TM"
 	
-	para "Psych up is a"
+	para "PSYCH UP is a"
 	line "move that copies"
 	cont "enemy stats."
 

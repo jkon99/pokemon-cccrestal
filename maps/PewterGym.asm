@@ -84,9 +84,15 @@ BrockSandstormText:
 	line "deserve this as"
 	cont "well!"
 
-	para "Its SANDSTORM,"
-	line "used to enhance"
-	cont "your rock mons!"
+	para "SANDSTORM will"
+	line "inflict damage on"
+	cont "both battlers."
+
+	para "It's for advanced"
+	line "trainers only."
+
+	para "Use it if you"
+	line "dare. Good luck!"
 	done
 
 TrainerCamperJerry:

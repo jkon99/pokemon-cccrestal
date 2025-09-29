@@ -1,15 +1,15 @@
 	object_const_def
 	const ROUTE27SANDSTORMHOUSE_GRANNY
 
-Route27SandstormHouse_MapScripts:
+Route27SandstormHouse_MapScripts: ; swapped with steel wing house position
 	def_scene_scripts
 
 	def_callbacks
-; GIVES STEEL_WING INSTEAD
+
 SandstormHouseWoman:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM37_SANDSTORM ; steel wing, swap with house in route 28, that house will give something else
+	checkevent EVENT_GOT_TM37_SANDSTORM ; gives hyper beam isntead
 	iftrue .AlreadyGotItem
 	special GetFirstPokemonHappiness
 	writetext SandstormHouseWomanText1
@@ -20,7 +20,7 @@ SandstormHouseWoman:
 .Loyal:
 	writetext SandstormHouseWomanLoyalText
 	promptbutton
-	verbosegiveitem TM_SANDSTORM
+	verbosegiveitem TM_HYPER_BEAM ; now gives hyper beam
 	iffalse .Done
 	setevent EVENT_GOT_TM37_SANDSTORM
 .AlreadyGotItem:
@@ -65,18 +65,16 @@ SandstormHouseWomanLoyalText:
 	done
 
 SandstormHouseSandstormDescription:
-	text "TM37 happens to be"
-	line "SANDSTORM."
+	text "TM15 happens to be"
+	line "HYPER BEAM."
 
-	para "It's a move that"
-	line "inflicts damage on"
-	cont "both battlers."
+	para "It's a super"
+	line "powerful move,"
+	cont "near unmatched."
 
-	para "It's for advanced"
-	line "trainers only."
-
-	para "Use it if you"
-	line "dare. Good luck!"
+	para "But you must"
+	line "recharge after"
+	cont "use."
 	done
 
 SandstormHouseWomanDisloyalText:
@@ -95,8 +93,8 @@ Route27SandstormHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, ROUTE_27, 1
-	warp_event  3,  7, ROUTE_27, 1
+	warp_event  2,  7, ROUTE_28, 1
+	warp_event  3,  7, ROUTE_28, 1
 
 	def_coord_events
 

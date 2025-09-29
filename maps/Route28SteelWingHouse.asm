@@ -2,7 +2,7 @@
 	const ROUTE28STEELWINGHOUSE_CELEBRITY
 	const ROUTE28STEELWINGHOUSE_FEAROW
 
-Route28SteelWingHouse_MapScripts:
+Route28SteelWingHouse_MapScripts: ; swapped with sandstorm house position
 	def_scene_scripts
 	scene_script Route28SteelWingHouseNoopScene ; unusable
 
@@ -14,7 +14,7 @@ Route28SteelWingHouseNoopScene:
 Celebrity:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM47_STEEL_WING ; should give tm steel wing in sandstorm house, have this lady give something else
+	checkevent EVENT_GOT_TM47_STEEL_WING 
 	iftrue .AlreadyGotItem
 	writetext CelebrityText1
 	promptbutton
@@ -72,8 +72,8 @@ Route28SteelWingHouse_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  2,  7, ROUTE_28, 1
-	warp_event  3,  7, ROUTE_28, 1
+	warp_event  2,  7, ROUTE_27, 1
+	warp_event  3,  7, ROUTE_27, 1
 
 	def_coord_events
 

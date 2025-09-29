@@ -44,16 +44,18 @@ IndigoPlateauPokecenter1FPrepareElite4Callback:
 PlateauRivalBattle1:
 	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
 	iffalse PlateauRivalScriptDone
+	checkevent EVENT_OPENED_MT_SILVER
+	iffalse PlateauRivalScriptDone
 	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
-	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal MONDAY, PlateauRivalScriptDone ; appears everyday now
-	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal WEDNESDAY, PlateauRivalScriptDone ; appears everyday now
-	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal FRIDAY, PlateauRivalScriptDone
-	ifequal SATURDAY, PlateauRivalScriptDone
+	iftrue PlateauRivalScriptDone ; first fight is any day
+	;readvar VAR_WEEKDAY
+	;ifequal SUNDAY, PlateauRivalScriptDone
+	;ifequal MONDAY, PlateauRivalScriptDone ; appears everyday now
+	;ifequal TUESDAY, PlateauRivalScriptDone
+	;ifequal WEDNESDAY, PlateauRivalScriptDone ; appears everyday now
+	;ifequal THURSDAY, PlateauRivalScriptDone
+	;ifequal FRIDAY, PlateauRivalScriptDone
+	;ifequal SATURDAY, PlateauRivalScriptDone
 	moveobject INDIGOPLATEAUPOKECENTER1F_RIVAL, 17, 9
 	appear INDIGOPLATEAUPOKECENTER1F_RIVAL
 	turnobject PLAYER, DOWN
@@ -65,18 +67,18 @@ PlateauRivalBattle1:
 	turnobject PLAYER, RIGHT
 	sjump PlateauRivalBattleCommon
 
-PlateauRivalBattle2:
+PlateauRivalBattle2: ; rematch every monday wednesday friday
 	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
 	iffalse PlateauRivalScriptDone
 	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
 	iftrue PlateauRivalScriptDone
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal MONDAY, PlateauRivalScriptDone ; appears everyday now
+	;ifequal MONDAY, PlateauRivalScriptDone ; 
 	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal WEDNESDAY, PlateauRivalScriptDone ; appears everyday now
+	;ifequal WEDNESDAY, PlateauRivalScriptDone ; 
 	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal FRIDAY, PlateauRivalScriptDone
+	;ifequal FRIDAY, PlateauRivalScriptDone
 	ifequal SATURDAY, PlateauRivalScriptDone
 	appear INDIGOPLATEAUPOKECENTER1F_RIVAL
 	turnobject PLAYER, DOWN

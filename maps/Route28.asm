@@ -17,7 +17,7 @@ Route28_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  7,  3, ROUTE_28_STEEL_WING_HOUSE, 1
+	warp_event  7,  3, ROUTE_27_SANDSTORM_HOUSE, 1 ; swapped with steel wing house
 	warp_event 33,  5, VICTORY_ROAD_GATE, 7
 
 	def_coord_events

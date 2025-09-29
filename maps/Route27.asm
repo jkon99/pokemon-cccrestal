@@ -469,7 +469,7 @@ Route27_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 33,  7, ROUTE_27_SANDSTORM_HOUSE, 1
+	warp_event 33,  7, ROUTE_28_STEEL_WING_HOUSE, 1 ; swapped with sandstorm house
 	warp_event 26,  5, TOHJO_FALLS, 1
 	warp_event 36,  5, TOHJO_FALLS, 2
 
