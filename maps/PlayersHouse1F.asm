@@ -210,7 +210,7 @@ MomWalksBackMovement:
 	slow_step LEFT
 	step_end
 
-ElmsLookingForYouText:
+ElmsLookingForYouText: ; added text about the hack
 	text "Oh, <PLAYER>…! Our"
 	line "neighbor, PROF."
 
@@ -220,6 +220,17 @@ ElmsLookingForYouText:
 	para "He said he wanted"
 	line "you to do some-"
 	cont "thing for him."
+
+	para "By the way,"
+	line "welcome to"
+	cont "#MON CCCRESTAL"
+
+	para "JON/KAZ made"
+	line "this hack, "
+	cont "bug him on"
+
+	para "discord for"
+	line "more details!"
 
 	para "Oh! I almost for-"
 	line "got! Your #MON"

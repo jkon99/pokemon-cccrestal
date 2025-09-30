@@ -120,11 +120,11 @@ TinTower1FSuicuneBattleScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE ;BATTLETYPE_SUICUNE
 	;playmusic MUSIC_SUICUNE_BATTLE
 	; force shiny doesnt play right music, manual shiny dvs dont work
-	/*; Set shiny DVs manually
-	writebyte $FA
-	writemem wEnemyMonDVs
-	writebyte $AA
-	writemem wEnemyMonDVs + 1 */
+	;; Set shiny DVs manually
+	;writebyte $FA
+	;writemem wEnemyMonDVs
+	;writebyte $AA
+	;writemem wEnemyMonDVs + 1 
 
 	startbattle
 	dontrestartmapmusic

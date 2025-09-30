@@ -310,12 +310,7 @@ TrainerFrontrunnerConnor:
 	waitbutton
 	closetext
 	end
-/*
-FrontrunnerConnorSeenText: 
-	text "Moon Prism Power,"
-	line "Make Up!"
-	done
-*/
+
 FrontrunnerConnorSeenText: 
 	text "Return to the"
 	line "darkness from"
@@ -329,32 +324,7 @@ FrontrunnerConnorBeatenText:
 FrontrunnerConnorAfterBattleText:
 	text "Yare yare daze..."
 	done
-/*
-TrainerFrontrunnerFrancis:
-	trainer FRANCIS, FRANCIS1, EVENT_BEAT_FRONTRUNNER_FRANCIS, FrontrunnerFrancisSeenText, FrontrunnerFrancisBeatenText, 0, .AfterScript
 
-.AfterScript:
-	endifjustbattled
-	opentext
-	writetext FrontrunnerFrancisAfterBattleText
-	waitbutton
-	closetext
-	end
-
-FrontrunnerFrancisSeenText: 
-	text "Watch out"
-	done
-
-FrontrunnerFrancisBeatenText:
-	text "Ooof..."
-	done
-
-FrontrunnerFrancisAfterBattleText:
-	text "Fuck you Jon."
-	line "You made my team"
-	cont "suckkkk."
-	done
-*/
 TrainerFrontrunnerGenna:
 	trainer GENNA, GENNA1, EVENT_BEAT_FRONTRUNNER_GENNA, FrontrunnerGennaSeenText, FrontrunnerGennaBeatenText, 0, .AfterScript
 

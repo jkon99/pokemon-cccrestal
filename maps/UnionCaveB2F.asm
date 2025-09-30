@@ -18,17 +18,17 @@ UnionCaveB2FLaprasCallback: ; code adjusted so Lapras appears every day
 	appear UNIONCAVEB2F_LAPRAS
 	.Done:
 	endcallback
-	/*
-	readvar VAR_WEEKDAY
-	ifequal FRIDAY, .Appear
-.NoAppear:
-	disappear UNIONCAVEB2F_LAPRAS
-	endcallback
+	
+	;readvar VAR_WEEKDAY
+	;ifequal FRIDAY, .Appear
+;.NoAppear:
+;	disappear UNIONCAVEB2F_LAPRAS
+;	endcallback
 
-.Appear:
-	appear UNIONCAVEB2F_LAPRAS
-	endcallback
-*/
+;.Appear:
+;	appear UNIONCAVEB2F_LAPRAS
+;	endcallback
+
 UnionCaveLapras:
 	faceplayer
 	cry LAPRAS

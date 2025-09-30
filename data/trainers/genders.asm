@@ -69,18 +69,18 @@ BTTrainerClassGenders:
 	db MALE   ; BLUE
 	db MALE   ; OFFICER
 	db FEMALE ; GRUNTF ; 
-/*	db MALE       ; mysticalman
-	db MALE		; JON
-	db MALE		; ALEX
-	db FEMALE		; ASH
-	db MALE		; CONNOR
-	db MALE		; FRANCIS
-	db FEMALE		; GENNA
-	db FEMALE		; LEX
-	db MALE		; NAHOM
-	db MALE		; NANDO
-	db MALE		; QASIM
-	db FEMALE		; QUINN
-	db FEMALE		; TJ */
+;	db MALE       ; mysticalman
+;	db MALE		; JON
+;	db MALE		; ALEX
+;	db FEMALE		; ASH
+;	db MALE		; CONNOR
+;	db MALE		; FRANCIS
+;	db FEMALE		; GENNA
+;	db FEMALE		; LEX
+;	db MALE		; NAHOM
+;	db MALE		; NANDO
+;	db MALE		; QASIM
+;	db FEMALE		; QUINN
+;	db FEMALE		; TJ 
 	assert_table_length NUM_TRAINER_CLASSES -13 ; exclude MYSTICALMAN
 	; assert_table_length NUM_TRAINER_CLASSES - 1, but set it to -13 unless you end up gendering eusine and new trainers

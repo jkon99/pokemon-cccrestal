@@ -6,18 +6,6 @@ Route10North_MapScripts:
 
 	def_callbacks
 	;callback MAPCALLBACK_OBJECTS, Route10NorthZapdosCallback
-/*
-Route10NorthZapdosCallback:
-	checkevent EVENT_OPENED_MT_SILVER 
-	iffalse .Hide
-	checkevent EVENT_FOUGHT_ZAPDOS
-	iftrue .Hide
-	appear ROUTE10NORTH_ZAPDOS
-	endcallback
-
-.Hide:
-	disappear ROUTE10NORTH_ZAPDOS
-	endcallback */
 
 PowerPlantSign:
 	jumptext PowerPlantSignText
@@ -29,25 +17,6 @@ Route10PokecenterSign:
 PowerPlantSignText:
 	text "KANTO POWER PLANT"
 	done
-/*
-Route10NorthZapdosScript: ; works but sprite is kris instead of bird
-	faceplayer
-	opentext
-	writetext ZapdosText
-	cry ZAPDOS
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_ZAPDOS
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ZAPDOS, 60
-	startbattle
-	disappear ROUTE10NORTH_ZAPDOS
-	reloadmapafterbattle
-	end
-
-ZapdosText:
-	text "Gyaoo!"
-	done */
 
 Route10North_MapEvents:
 	db 0, 0 ; filler

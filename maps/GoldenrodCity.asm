@@ -37,7 +37,12 @@ GoldenrodCityMoveTutorCallback:
 	checkitem COIN_CASE
 	iffalse .MoveTutorDisappear
 	readvar VAR_WEEKDAY
+	ifequal SUNDAY, .MoveTutorAppear
+	ifequal MONDAY, .MoveTutorAppear
+	ifequal TUESDAY, .MoveTutorAppear
 	ifequal WEDNESDAY, .MoveTutorAppear
+	ifequal THURSDAY, .MoveTutorAppear
+	ifequal FRIDAY, .MoveTutorAppear
 	ifequal SATURDAY, .MoveTutorAppear
 .MoveTutorDisappear:
 	disappear GOLDENRODCITY_MOVETUTOR
@@ -60,7 +65,7 @@ MoveTutorScript:
 	writetext GoldenrodCityMoveTutorAsk4000CoinsOkayText
 	yesorno
 	iffalse .Refused2
-	checkcoins 4000
+	checkcoins 100
 	ifequal HAVE_LESS, .NotEnoughMoney
 	writetext GoldenrodCityMoveTutorWhichMoveShouldITeachText
 	loadmenu .MoveMenuHeader

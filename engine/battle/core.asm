@@ -6139,35 +6139,7 @@ LoadEnemyMon:
 	dec a
 	jr nz, .Happiness
 
-; below is og code for above
-	/* ; Forced shiny battle type
-; Used by Red Gyarados at Lake of Rage
-	cp BATTLETYPE_FORCESHINY
-	jr nz, .GenerateDVs
 
-	ld b, ATKDEFDV_SHINY ; $ea
-	ld c, SPDSPCDV_SHINY ; $aa
-	jr .UpdateDVs
-
-.GenerateDVs:
-; Generate new random DVs
-	call BattleRandom
-	ld b, a
-	call BattleRandom
-	ld c, a
-
-.UpdateDVs:
-; Input DVs in register bc
-	ld hl, wEnemyMonDVs
-	ld a, b
-	ld [hli], a
-	ld [hl], c
-
-; We've still got more to do if we're dealing with a wild monster
-	ld a, [wBattleMode]
-	dec a
-	jr nz, .Happiness
-*/
 
 ; Species-specfic:
 

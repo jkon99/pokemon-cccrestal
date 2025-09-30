@@ -201,21 +201,6 @@ BrockFightDoneText:
 	cont "er too."
 	done
 
-/*BrockTMGivenText:
-	text "TM37 happens to be"
-	line "SANDSTORM."
-
-	para "It's a move that"
-	line "inflicts damage on"
-	cont "both battlers."
-
-	para "It's for advanced"
-	line "trainers only."
-
-	para "Use it if you"
-	line "dare. Good luck!"
-	done */
-
 CamperJerrySeenText:
 	text "The trainers of"
 	line "this GYM use rock-"

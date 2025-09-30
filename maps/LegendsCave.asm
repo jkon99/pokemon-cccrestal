@@ -4,7 +4,7 @@
 	const LEGENDS_MOLTRES
 	const ICEPATH1F_ARTICUNO
 
-LegendsCave_MapScripts: ; for some reason entering map it loads as "cerulean cave"
+LegendsCave_MapScripts: ; for some reason entering map it loads as "cerulean cave", also seems to load them despite mt silver check but idc
 	def_scene_scripts
 
 	def_callbacks
@@ -29,20 +29,7 @@ IcePathArticunoCallback:
 .Hide:
 	disappear ICEPATH1F_ARTICUNO
 	endcallback
-/*
-LegendsCaveMewCallback:
-	checkevent EVENT_OPENED_MT_SILVER 
-	iffalse .Hide
-	checkevent EVENT_FOUGHT_MEW 
-	iftrue .Hide
-	appear LEGENDS_MEW 
-	;callasm LoadUsedSpritesGFX
-	endcallback
 
-.Hide:
-	disappear LEGENDS_MEW
-	endcallback
-*/
 LegendsCaveZapdosCallback:
 	checkevent EVENT_OPENED_MT_SILVER 
 	iffalse .Hide
@@ -85,26 +72,7 @@ IcePathArticunoScript: ; works tested for now
 ArticunoText:
 	text "Gyaoo!"
 	done
-/*
-LegendsMewScript: 
-	faceplayer
-	opentext
-	writetext MewText
-	cry MEW
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MEW
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MEW, 70
-	startbattle
-	disappear LEGENDS_MEW
-	reloadmapafterbattle
-	end
 
-MewText:
-	text "Mew!"
-	done
-*/
 LegendsZapdosScript: 
 	faceplayer
 	opentext

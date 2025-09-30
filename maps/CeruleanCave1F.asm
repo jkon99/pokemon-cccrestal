@@ -5,16 +5,7 @@ CeruleanCave1F_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-/*	callback MAPCALLBACK_OBJECTS, CeruleanCave1FMewCallback
 
-CeruleanCave1FMewCallback:
-	checkevent EVENT_FOUGHT_MEW
-	iftrue .NoAppear
-	appear CERULEANCAVE1F_MEW
-
-.NoAppear:
-	disappear CERULEANCAVE1F_MEW
-	endcallback */
 
 CeruleanCave1FMewScript: 
 	faceplayer

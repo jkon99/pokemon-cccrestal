@@ -279,33 +279,6 @@ NewBarkTownElmsLabSignText:
 NewBarkTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
-/*
-TrainerFrontrunnerTJ1:
-	trainer GENNA, GENNA1, EVENT_BEAT_FRONTRUNNER_GENNA, FrontrunnerTJSeenText1, FrontrunnerTJBeatenText1, 0, .AfterScript
-
-.AfterScript:
-	endifjustbattled
-	opentext
-	writetext FrontrunnerTJAfterBattleText1
-	waitbutton
-	closetext
-	end
-
-FrontrunnerTJSeenText1: 
-	text "Loser has to commit"
-	line "tax fraud!"
-	done
-
-FrontrunnerTJBeatenText1:
-	text "Okay so about that "
-	line "bet.."
-	done
-
-FrontrunnerTJAfterBattleText1:
-	text "The IRS probably won’t"
-	line "notice me anyway, "
-	cont "right?"
-	done */
 
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler

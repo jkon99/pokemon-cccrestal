@@ -181,7 +181,7 @@ CreditsStringsPointers:
 .KazuyoshiOsawa:      db "  KAZUYOSHI OSAWA@"
 .KimikoNakamichi:     db "  KIMIKO NAKAMICHI@"
 .Staff:               db "      #MON"                 ; "ポケットモンスター"
-                    next "  CRYSTAL VERSION"          ; "　　クりスタル　バージョン"
+                    next "     CCCRESTAL"          ; "　　クりスタル　バージョン" ; changed tital
                     next "       STAFF@"              ; "　　　　スタッフ@"
 .Director:            db "      DIRECTOR@"            ; "エグゼクティブ　ディレクター@"
 .CoDirector:          db "    CO-DIRECTOR@"           ; "ディレクター@"

@@ -12,31 +12,30 @@ CeladonMansion3F_MapScripts:
 
 ; might add back swap out diploma printing guy instead for my trainer?
 
-/*
-GameFreakGameDesignerScript:
-	faceplayer
-	opentext
-	writetext GameFreakGameDesignerText
-	readvar VAR_DEXCAUGHT
-	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
-	waitbutton
-	closetext
-	end
+;GameFreakGameDesignerScript:
+;	faceplayer
+;	opentext
+;	writetext GameFreakGameDesignerText
+;	readvar VAR_DEXCAUGHT
+;	ifgreater NUM_POKEMON - 2 - 1, .CompletedPokedex ; ignore Mew and Celebi
+;	waitbutton
+;	closetext
+;	end
 
-.CompletedPokedex:
-	promptbutton
-	writetext GameFreakGameDesignerCompletedPokedexText
-	playsound SFX_DEX_FANFARE_230_PLUS
-	waitsfx
-	writetext GameFreakGameDesignerPauseForDiplomaText
-	promptbutton
-	special Diploma
-	writetext GameFreakGameDesignerAfterDiplomaText
-	waitbutton
-	closetext
-	setevent EVENT_ENABLE_DIPLOMA_PRINTING
-	end
-*/
+;.CompletedPokedex:
+;	promptbutton
+;	writetext GameFreakGameDesignerCompletedPokedexText
+;	playsound SFX_DEX_FANFARE_230_PLUS
+;	waitsfx
+;	writetext GameFreakGameDesignerPauseForDiplomaText
+;	promptbutton
+;	special Diploma
+;	writetext GameFreakGameDesignerAfterDiplomaText
+;	waitbutton
+;	closetext
+;	setevent EVENT_ENABLE_DIPLOMA_PRINTING
+;	end
+
 GameFreakGraphicArtistScript:
 	faceplayer
 	opentext
@@ -84,39 +83,39 @@ CeladonMansion3FGameProgram:
 
 CeladonMansion3FReferenceMaterial:
 	jumptext CeladonMansion3FReferenceMaterialText
-/*
-GameFreakGameDesignerText:
-	text "Is that right?"
 
-	para "I'm the GAME"
-	line "DESIGNER!"
+;GameFreakGameDesignerText:
+;	text "Is that right?"
 
-	para "Filling up your"
-	line "#DEX is tough,"
-	cont "but don't give up!"
-	done
+;	para "I'm the GAME"
+;	line "DESIGNER!"
 
-GameFreakGameDesignerCompletedPokedexText:
-	text "Wow! Excellent!"
-	line "You completed your"
-	cont "#DEX!"
+;	para "Filling up your"
+;	line "#DEX is tough,"
+;	cont "but don't give up!"
+;	done
 
-	para "Congratulations!"
-	done
+;GameFreakGameDesignerCompletedPokedexText:
+;	text "Wow! Excellent!"
+;	line "You completed your"
+;	cont "#DEX!"
 
-GameFreakGameDesignerPauseForDiplomaText:
-	text "…"
-	done
+;	para "Congratulations!"
+;	done
 
-GameFreakGameDesignerAfterDiplomaText:
-	text "The GRAPHIC ARTIST"
-	line "will print out a"
-	cont "DIPLOMA for you."
+;GameFreakGameDesignerPauseForDiplomaText:
+;	text "…"
+;	done
 
-	para "You should go show"
-	line "it off."
-	done
-*/
+;GameFreakGameDesignerAfterDiplomaText:
+;	text "The GRAPHIC ARTIST"
+;	line "will print out a"
+;	cont "DIPLOMA for you."
+
+;	para "You should go show"
+;	line "it off."
+;	done
+
 GameFreakGraphicArtistText:
 	text "I'm the GRAPHIC"
 	line "ARTIST."
