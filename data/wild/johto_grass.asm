@@ -2,22 +2,22 @@
 
 JohtoGrassWildMons:
 
-	def_grass_wildmons SPROUT_TOWER_2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons SPROUT_TOWER_2F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 5, RATTATA
 	db 6, RATTATA
 	db 5, BELLSPROUT
-	db 6, RATTATA
 	db 6, GASTLY
+	db 6, RATTATA
 	db 6, RATTATA
 	db 6, BELLSPROUT
 	; day
 	db 5, RATTATA
 	db 6, RATTATA
 	db 5, BELLSPROUT
-	db 6, RATTATA
 	db 6, GASTLY
+	db 6, RATTATA
 	db 6, RATTATA
 	db 6, BELLSPROUT
 	; nite
@@ -30,36 +30,36 @@ JohtoGrassWildMons:
 	db 6, BELLSPROUT
 	end_grass_wildmons
 
-	def_grass_wildmons SPROUT_TOWER_3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons SPROUT_TOWER_3F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 5, RATTATA
 	db 6, RATTATA
 	db 6, BELLSPROUT
-	db 6, RATTATA
-	db 7, GASTLY
+	db 6, GASTLY
+	db 7, RATTATA
 	db 6, RATTATA
 	db 6, BELLSPROUT
 	; day
 	db 5, RATTATA
 	db 6, RATTATA
 	db 6, BELLSPROUT
-	db 6, RATTATA
-	db 7, GASTLY
+	db 6, GASTLY
+	db 7, RATTATA
 	db 6, RATTATA
 	db 6, BELLSPROUT
 	; nite
 	db 5, GASTLY
 	db 6, GASTLY
 	db 6, BELLSPROUT
-	db 6, RATTATA
-	db 7, GASTLY
+	db 6, GASTLY
+	db 7, RATTATA
 	db 7, GASTLY
 	db 6, BELLSPROUT
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_2F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -86,8 +86,8 @@ JohtoGrassWildMons:
 	db 24, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_3F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -114,8 +114,8 @@ JohtoGrassWildMons:
 	db 24, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_4F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_4F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -142,8 +142,8 @@ JohtoGrassWildMons:
 	db 24, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_5F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_5F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -170,8 +170,8 @@ JohtoGrassWildMons:
 	db 24, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_6F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_6F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -198,8 +198,8 @@ JohtoGrassWildMons:
 	db 24, CHANSEY
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_7F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_7F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -226,8 +226,8 @@ JohtoGrassWildMons:
 	db 24, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_8F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_8F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -254,8 +254,8 @@ JohtoGrassWildMons:
 	db 24, RATTATA
 	end_grass_wildmons
 
-	def_grass_wildmons TIN_TOWER_9F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons TIN_TOWER_9F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 20, RATTATA
 	db 21, RATTATA
@@ -506,8 +506,8 @@ JohtoGrassWildMons:
 	db 23, ONIX
 	end_grass_wildmons
 
-	def_grass_wildmons SLOWPOKE_WELL_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons SLOWPOKE_WELL_B1F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 10, ZUBAT
 	db 10, ZUBAT
@@ -534,8 +534,8 @@ JohtoGrassWildMons:
 	db 12, SLOWPOKE
 	end_grass_wildmons
 
-	def_grass_wildmons SLOWPOKE_WELL_B2F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons SLOWPOKE_WELL_B2F ; 2 percent in v1
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 21, ZUBAT
 	db 23, CLEFAIRY
@@ -562,7 +562,7 @@ JohtoGrassWildMons:
 	db 23, SLOWPOKE
 	end_grass_wildmons
 
-	def_grass_wildmons ILEX_FOREST
+	def_grass_wildmons ILEX_FOREST 
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 11, CATERPIE
@@ -702,8 +702,8 @@ JohtoGrassWildMons:
 	db 18, RATICATE
 	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons ICE_PATH_1F ; 2 percent in v1
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, SWINUB
 	db 36, GOLBAT
@@ -730,36 +730,8 @@ JohtoGrassWildMons:
 	db 37, GOLBAT
 	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_B1F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
-	; morn
-	db 36, SWINUB
-	db 36, GOLBAT
-	db 36, GOLBAT
-	db 37, SWINUB
-	db 37, GOLBAT
-	db 36, JYNX
-	db 37, JYNX
-	; day
-	db 36, SWINUB
-	db 36, GOLBAT
-	db 36, GOLBAT
-	db 37, SWINUB
-	db 37, GOLBAT
-	db 36, JYNX
-	db 37, JYNX
-	; nite
-	db 36, DELIBIRD
-	db 36, GOLBAT
-	db 36, GOLBAT
-	db 37, DELIBIRD
-	db 37, GOLBAT
-	db 36, SNEASEL
-	db 37, SNEASEL
-	end_grass_wildmons
-
-	def_grass_wildmons ICE_PATH_B2F_MAHOGANY_SIDE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons ICE_PATH_B1F ; 2 percent in v1
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, SWINUB
 	db 36, GOLBAT
@@ -786,8 +758,8 @@ JohtoGrassWildMons:
 	db 37, SNEASEL
 	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons ICE_PATH_B2F_MAHOGANY_SIDE ; 2 percent in v1
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, SWINUB
 	db 36, GOLBAT
@@ -814,8 +786,36 @@ JohtoGrassWildMons:
 	db 37, SNEASEL
 	end_grass_wildmons
 
-	def_grass_wildmons ICE_PATH_B3F
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons ICE_PATH_B2F_BLACKTHORN_SIDE ; 2 percent in v1
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
+	; morn
+	db 36, SWINUB
+	db 36, GOLBAT
+	db 36, GOLBAT
+	db 37, SWINUB
+	db 37, GOLBAT
+	db 36, JYNX
+	db 37, JYNX
+	; day
+	db 36, SWINUB
+	db 36, GOLBAT
+	db 36, GOLBAT
+	db 37, SWINUB
+	db 37, GOLBAT
+	db 36, JYNX
+	db 37, JYNX
+	; nite
+	db 36, DELIBIRD
+	db 36, GOLBAT
+	db 36, GOLBAT
+	db 37, DELIBIRD
+	db 37, GOLBAT
+	db 36, SNEASEL
+	db 37, SNEASEL
+	end_grass_wildmons
+
+	def_grass_wildmons ICE_PATH_B3F ; 2 percent in v1
+	db 3 percent, 3 percent, 3 percent ; encounter rates: morn/day/nite
 	; morn
 	db 36, SWINUB
 	db 36, GOLBAT
@@ -1514,8 +1514,8 @@ JohtoGrassWildMons:
 	db 23, MEOWTH
 	end_grass_wildmons
 
-	def_grass_wildmons ROUTE_39
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	def_grass_wildmons ROUTE_39 ; 2 percent in v1
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 21, MEOWTH
 	db 22, RATICATE

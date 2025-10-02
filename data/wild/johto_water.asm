@@ -152,7 +152,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_34
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 22, TENTACOOL
+	db 22, STARYU ; not in v1
 	db 23, TENTACRUEL
 	end_water_wildmons
 
@@ -235,7 +235,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	db 22, TENTACOOL
+	db 22, STARYU ; not in V1
 	db 21, TENTACOOL
 	db 23, TENTACRUEL
 	end_water_wildmons
@@ -250,7 +250,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ECRUTEAK_CITY
 	db 2 percent ; encounter rate
 	db 20, POLIWAG
-	db 21, POLIWAG
+	db 21, POLIWAG ; change to staryu?
 	db 22, POLIWHIRL
 	end_water_wildmons
 
