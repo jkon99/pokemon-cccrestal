@@ -23,7 +23,8 @@ BulbasaurEvosAttacks:
 	db 10, VINE_WHIP
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
-	db 20, RAZOR_LEAF
+	db 19, RAZOR_LEAF ; v1 level 20
+	db 22, SLUDGE ; v2 added
 	db 25, SWEET_SCENT
 	db 32, GROWTH
 	db 39, SYNTHESIS
@@ -41,9 +42,11 @@ IvysaurEvosAttacks:
 	db 10, VINE_WHIP
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
-	db 22, RAZOR_LEAF
+	db 21, RAZOR_LEAF ; v1 level 22
+	db 24, SLUDGE ; v2 added
 	db 29, SWEET_SCENT
-	db 38, GROWTH
+	db 33, GROWTH ; v1 level 38 
+	db 38, SLUDGE_BOMB ; v2 added
 	db 47, SYNTHESIS
 	db 56, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -59,9 +62,11 @@ VenusaurEvosAttacks:
 	db 10, VINE_WHIP
 	db 15, POISONPOWDER
 	db 15, SLEEP_POWDER
-	db 22, RAZOR_LEAF
+	db 21, RAZOR_LEAF ; v1 level 22
+	db 24, SLUDGE ; v2 added
 	db 29, SWEET_SCENT
-	db 41, GROWTH
+	db 33, GROWTH ; v1 level 41
+	db 42, SLUDGE_BOMB ; v2 added
 	db 53, SYNTHESIS
 	db 65, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -94,7 +99,7 @@ CharmeleonEvosAttacks:
 	db 24, DRAGON_RAGE
 	db 29, SCARY_FACE
 	db 34, FLAMETHROWER
-	db 41, SLASH
+	db 38, SLASH ; v1 level 41
 	db 48, DRAGON_RAGE
 	db 55, FIRE_SPIN
 	db 0 ; no more level-up moves
@@ -112,9 +117,9 @@ CharizardEvosAttacks:
 	db 29, SCARY_FACE
 	db 34, FLAMETHROWER
 	db 36, WING_ATTACK
-	db 44, SLASH
-	db 54, DRAGONBREATH
-	db 64, FIRE_SPIN
+	db 41, SLASH ; v1 level 44
+	db 49, DRAGONBREATH ; v1 level 54
+	db 60, FIRE_SPIN ; v1 level 64
 	db 0 ; no more level-up moves
 
 SquirtleEvosAttacks:
@@ -794,7 +799,7 @@ PrimeapeEvosAttacks:
 	db 36, SEISMIC_TOSS
 	db 45, CROSS_CHOP
 	db 54, SCREECH
-	db 63, THRASH
+	db 60, THRASH ; v1 level 63
 	db 0 ; no more level-up moves
 
 GrowlitheEvosAttacks:
@@ -892,7 +897,7 @@ AlakazamEvosAttacks:
 	db 26, RECOVER
 	db 31, FUTURE_SIGHT
 	db 38, PSYCHIC_M
-	db 45, REFLECT
+	db 47, REFLECT ; v1 level 45
 	db 0 ; no more level-up moves
 
 MachopEvosAttacks:
@@ -1105,8 +1110,8 @@ SlowpokeEvosAttacks:
 	db 20, CONFUSION
 	db 29, DISABLE
 	db 34, HEADBUTT
-	db 43, AMNESIA
-	db 48, PSYCHIC_M
+	db 38, AMNESIA ; level 43 v1
+	db 42, PSYCHIC_M ; level 48 v1
 	db 0 ; no more level-up moves
 
 SlowbroEvosAttacks:
@@ -1121,8 +1126,8 @@ SlowbroEvosAttacks:
 	db 29, DISABLE
 	db 34, HEADBUTT
 	db 37, WITHDRAW
-	db 46, AMNESIA
-	db 54, PSYCHIC_M
+	db 43, AMNESIA ; level 46 v1
+	db 47, PSYCHIC_M ; level 54 v1
 	db 0 ; no more level-up moves
 
 MagnemiteEvosAttacks:
