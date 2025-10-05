@@ -371,7 +371,7 @@ JohtoGrassWildMons:
 	; morn
 	db 20, NATU
 	db 22, NATU
-	db 19, NATU
+	db 23, NATU ; v1 was lv19
 	db 24, NATU
 	db 20, SMEARGLE
 	db 22, SMEARGLE
@@ -379,7 +379,7 @@ JohtoGrassWildMons:
 	; day
 	db 20, NATU
 	db 22, NATU
-	db 19, NATU
+	db 23, NATU ; v1 was lv19
 	db 24, NATU
 	db 20, SMEARGLE
 	db 22, SMEARGLE
@@ -387,7 +387,7 @@ JohtoGrassWildMons:
 	; nite
 	db 20, NATU
 	db 22, NATU
-	db 19, NATU
+	db 23, NATU ; v1 was lv19
 	db 24, NATU
 	db 21, WOOPER
 	db 22, QUAGSIRE
