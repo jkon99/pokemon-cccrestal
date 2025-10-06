@@ -2894,7 +2894,7 @@ BlackbeltGroup:
 
 	; BLACKBELT_T (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 41, MACHAMP
+	db 41, HITMONTOP
 	db -1 ; end
 
 	; BLACKBELT_T (9)

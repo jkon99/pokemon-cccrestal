@@ -1960,8 +1960,8 @@ OmanyteEvosAttacks:
 	db 28, ANCIENTPOWER
 	db 31, LEER
 	db 37, PROTECT
-	db 51, ROCK_SLIDE
-	db 55, HYDRO_PUMP
+	db 44, ROCK_SLIDE
+	db 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 OmastarEvosAttacks:
@@ -1975,8 +1975,8 @@ OmastarEvosAttacks:
 	db 31, LEER
 	db 37, PROTECT
 	db 40, SPIKE_CANNON
-	db 51, ROCK_SLIDE
-	db 55, HYDRO_PUMP
+	db 48, ROCK_SLIDE
+	db 54, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 KabutoEvosAttacks:
