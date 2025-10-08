@@ -2841,9 +2841,10 @@ MisdreavusEvosAttacks:
 	db 12, CONFUSE_RAY
 	db 19, MEAN_LOOK
 	db 23, SHADOW_BALL
-	db 27, PSYBEAM
-	db 36, PAIN_SPLIT
-	db 46, PERISH_SONG
+	db 26, PSYBEAM ; lv27 in v1
+	db 32, HYPNOSIS ; v2 only
+	db 39, PAIN_SPLIT ; lv36 in v1
+	db 48, PERISH_SONG ; lv46 in v1
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
@@ -3122,7 +3123,7 @@ PiloswineEvosAttacks:
 	db 19, ENDURE
 	db 23, DIG
 	db 28, TAKE_DOWN
-	db 33, FURY_ATTACK
+	db 33, ROCK_SLIDE ; v1 is fury attack
 	db 42, MIST
 	db 47, EARTHQUAKE
 	db 54, BLIZZARD
