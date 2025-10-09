@@ -15,7 +15,7 @@ To set up the repository, see [INSTALL.md](INSTALL.md).
 
 # Additional credits
 
-New sprites: the_chocobean, shoesbedrawin
+New sprites: the_chocobean / gris, shoesbedrawin
 
 Route 47 remix: https://pastebin.com/aSDuVfDW
 
