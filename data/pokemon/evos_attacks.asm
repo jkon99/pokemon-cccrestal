@@ -1307,8 +1307,8 @@ HaunterEvosAttacks:
 	db 16, CURSE
 	db 18, SMOG
 	db 21, NIGHT_SHADE
-	db 28, SLUDGE
-	db 31, SHADOW_BALL
+	db 26, SLUDGE ; v1 lv 28
+	db 29, SHADOW_BALL ; v1 lv31
 	db 34, CONFUSE_RAY
 	db 38, DREAM_EATER
 	db 43, SLUDGE_BOMB
@@ -1325,8 +1325,8 @@ GengarEvosAttacks:
 	db 16, CURSE
 	db 18, SMOG
 	db 21, NIGHT_SHADE
-	db 28, SLUDGE
-	db 31, SHADOW_BALL
+	db 26, SLUDGE
+	db 29, SHADOW_BALL
 	db 34, CONFUSE_RAY
 	db 38, DREAM_EATER
 	db 46, SLUDGE_BOMB
