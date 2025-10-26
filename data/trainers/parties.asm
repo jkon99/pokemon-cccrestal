@@ -88,7 +88,7 @@ PryceGroup:
 	db "PRYCE@", TRAINERTYPE_ITEM_MOVES ; v1 minus 1 level
 	db 37, DELIBIRD,   NEVERMELTICE,    HEADBUTT, ICY_WIND, MUD_SLAP, FUTURE_SIGHT
 	db 37, SNEASEL,   NEVERMELTICE, SLASH, ICY_WIND, METAL_CLAW, FAINT_ATTACK
-	db 37, JYNX,    NO_ITEM, CONFUSION, ICE_PUNCH, LOVELY_KISS, DOUBLESLAP
+	db 37, JYNX,    NO_ITEM, PSYCHIC_M, ICE_PUNCH, LOVELY_KISS, LICK ; v1: psychic->confusion, lick->doubleslap
 	db 38, DEWGONG,   MINT_BERRY, HEADBUTT, ICY_WIND, SURF, REST
 	db 40, PILOSWINE,  GOLD_BERRY,  ICY_WIND, DIG, MIST, BLIZZARD
 	db -1 ; end
@@ -2972,8 +2972,8 @@ PsychicGroup:
 
 	; PSYCHIC_T (7)
 	db "MARK@", TRAINERTYPE_MOVES
-	db 15, ABRA,       TELEPORT, FLASH, NO_MOVE, NO_MOVE
-	db 15, ABRA,       TELEPORT, FLASH, NO_MOVE, NO_MOVE
+	db 15, ABRA,       TELEPORT, FLASH, CONFUSION, NO_MOVE
+	db 15, ABRA,       TELEPORT, FLASH, CONFUSION, NO_MOVE
 	db 21, KADABRA,    TELEPORT, KINESIS, CONFUSION, NO_MOVE
 	db -1 ; end
 
@@ -3551,7 +3551,7 @@ KimonoGirlGroup:
 	db -1 ; end
 
 	; KIMONO_GIRL (2) ; v1 minus 1 level
-	db "NAOKO@", TRAINERTYPE_ITEM ; for some reason she sent out cleffa? probably cause swapped pokemon and berry position should be fixed now
+	db "NAOKO@", TRAINERTYPE_ITEM 
 	db 24, FLAREON, BERRY
 	db -1 ; end
 
